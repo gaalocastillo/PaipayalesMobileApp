@@ -13,7 +13,7 @@ import { RegistrationPage } from './registration.page';
     IonicModule,
     RouterModule.forChild([
       {
-        path: 'registration',
+        path: '',
         component: RegistrationPage
       }
     ])
