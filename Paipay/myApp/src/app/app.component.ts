@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
