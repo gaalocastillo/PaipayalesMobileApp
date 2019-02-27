@@ -1,16 +1,17 @@
 <ion-split-pane>
+	
 	<ion-menu contentId="content">
 		
 		<ion-header>
 			<ion-toolbar>
-				<ion-title></ion-title>
+				<ion-title>M</ion-title>
 			</ion-toolbar>
 		</ion-header>
 
 		<ion-content>
 			<ion-list>
-				<ion-menu-toggle autohide="True" *ngFor="let p for pages">
-					<ion-item [routerLink] ="p.url" routerDirection="root" [class.active-item]= "selectedPath === p.url"> <!-- tell angular its a value that needs to be get from-->
+				<ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+					<ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]= "selectedPath === p.url"> <!-- tell angular its a value that needs to be get from-->
 						{{p.title}}
 					</ion-item>
 				</ion-menu-toggle>

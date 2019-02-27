@@ -9,18 +9,19 @@ import { MenuPage } from './menu.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'menu',
     component: MenuPage,
     children: [
-      { path: 'my-account', loadChildren: '../my-account/my-account.module#MyAccountPageModule' },
-      { path: 'my-cart', loadChildren: '../my-cart/my-cart.module#MyCartPageModule' },
+      { path: 'my-account', loadChildren: './my-account/my-account.module#MyAccountPageModule'},
+      { path: 'my-cart', loadChildren: './my-cart/my-cart.module#MyCartPageModule'},
+      { path: 'productsMenu', loadChildren: './productsMenu/productsMenu.module#ProductsMenuPageModule'}
     ]
   },
   {
     path: '',
-    redirectTo: 'menu/my-account' 
+    redirectTo: 'menu/productsMenu' 
+  }
 
-  },
 ];
 
 @NgModule({
