@@ -27,13 +27,36 @@ export class MenuPage implements OnInit {
 	selectedPath = '';
 
 
-	constructor(private router: Router){
+	constructor(private router:Router){
 		this.router.events.subscribe((event: RouterEvent) =>{
 			this.selectedPath = event.url;
 		});
 	}
-  	
-  	ngOnInit() {
-  	}
 
+	// constructor(private route:Router){
+
+ //  	this.routeEvent(this.route);
+
+	// }
+
+	// routeEvent(router: Router){
+ //  		router.events.subscribe(e => {
+ //    		this.selectedPath = e.url;
+ //    	});
+ //  	}
+
+
+  		ngOnInit(){
+  	}
 }
+
+
+	// constructor(private router:Router){
+	// 	this.router.events.subscribe((event: RouterEvent) =>{
+	// 		this.selectedPath = event.url;
+	// 	});
+	// }
+  	
+  	
+
+
