@@ -1,0 +1,40 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-content{
+    --background: url("src/assets/backgrounds/introBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/introBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}  
+
+.no-scroll .scroll-content {
+    overflow: hidden;
+}
+
+.home-container {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.row-center img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+
+
+//#402208 color de flecha y letra

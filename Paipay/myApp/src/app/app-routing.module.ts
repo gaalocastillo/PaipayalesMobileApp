@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'menu', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
   { path: 'productsMenu', loadChildren: './productsMenu/productsMenu.module#ProductsMenuPageModule' },
@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'vegetables', loadChildren: './vegetables/vegetables.module#VegetablesPageModule' },
   { path: 'organic', loadChildren: './organic/organic.module#OrganicPageModule' },
   { path: 'rice', loadChildren: './rice/rice.module#RicePageModule' },
+  { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
+  { path: 'history', loadChildren: './history/history.module#HistoryPageModule' },
 ];
 
 @NgModule({

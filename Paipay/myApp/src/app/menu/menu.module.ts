@@ -37,4 +37,5 @@ const routes: Routes = [
   ],
   declarations: [MenuPage]
 })
+
 export class MenuPageModule {}
