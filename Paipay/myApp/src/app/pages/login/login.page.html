@@ -1,0 +1,59 @@
+
+<ion-content fullscreen  class= "bg-image" scrollX="false" >
+ <!-- logo block -->
+  <div>
+    <figure>
+      <ion-img src="assets/logos/logo2.png"></ion-img>
+    </figure>
+  </div>
+  <!-- buttons block -->
+
+  <div style="text-align: center;">
+     <button class="registration-button" [routerLink]="['/registration']">
+      <div>
+        <ion-img src="assets/buttons/registration1.png" style="width:66.07px;height:66.01px;"></ion-img><br>
+        <label class="registration-label">REGÍSTRATE</label>
+      </div>
+     </button>
+  </div>
+ 
+  <!-- input block -->
+  <div>
+    <ion-grid class="gridInfo">
+      
+      <ion-list class="list-input" >
+        
+        <ion-item >
+          <ion-input class="email-input" type="email" placeholder="Correo electrónico" ></ion-input>
+        </ion-item>
+          
+        <ion-item >
+          <ion-input class="password-label" type="password" placeholder="Contraseña" ></ion-input>
+        </ion-item>
+      
+      </ion-list>
+
+      <ion-row class="first-row">
+        <ion-col style=" align-self: center; justify-self: center;">
+          <div>
+            <ion-label class="forgotten-password" [routerLink]="['/forgottenpass']" color="primary" floating> ¿Has olvidado tu contraseña?</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label class="remeberMe" >Recuérdame</ion-label>
+        </ion-col>
+      </ion-row>
+    
+    </ion-grid>
+  </div>  
+
+  <div>
+      <button style=" background-color: transparent !important;" [routerLink]="['/menu/products-menu']" >
+        <img src="assets/buttons/continueRegistration.png" alt="">
+      </button>
+    </div>
+
+</ion-content>

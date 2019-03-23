@@ -1,0 +1,29 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.labelPass {
+    color: #3B2508;
+    font-family: "Century Gothic";
+    size: 16px;
+    
+}
+
+.email-input {
+    background-color: transparent !important;
+    text-align: center;
+    border-bottom: 23px;
+}
+.retrivePass {
+    background-color: transparent;
+    text-align: center !important;
+    display: inline-block;
+    align-content: center !important;
+    
+}

@@ -1,0 +1,50 @@
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+    <!-- logo block -->
+  <div class="logo1">
+      <figure>
+        <ion-img src="assets/logos/logo2.png"></ion-img>
+      </figure>
+    </div>
+
+    <div class="logo2">
+        <figure>
+          <ion-img src="assets/registration.png"></ion-img>
+        </figure>
+      </div>
+
+    <ion-grid>
+			        
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Nombre y Apellido"></ion-input>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Teléfono"></ion-input>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+            <ion-input class="mail" type="email" placeholder="Correo Electrónico"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+              <ion-input class="mail" type="password" placeholder="Contraseña"></ion-input>
+            </ion-col>
+          </ion-row>
+  
+    
+      </ion-grid>
+
+    <div>
+      <button style=" background-color: transparent !important;" [routerLink]="['/products-menu']" >
+        <img src="assets/buttons/continueRegistration.png" alt="">
+      </button>
+    </div>
+
+</ion-content>

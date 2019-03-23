@@ -1,0 +1,16 @@
+<ion-header no-border>
+  <ion-toolbar style="--background: transparent">
+    <ion-buttons >
+      <ion-button class="jumpIntro" [routerLink]="['/login']">
+          <label>Saltar intro</label>
+          <ion-icon  src="/assets/rightArrow.svg" size="small"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class= "bg-image" scrollY="false">
+  <div class="home-container row-center img" [routerLink]="['/history']">
+      <img class="logo" src="../assets/logos/LOGO MAS ESLOGAN-02-02.png">
+  </div>
+</ion-content>

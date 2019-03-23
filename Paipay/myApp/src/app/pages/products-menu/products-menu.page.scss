@@ -1,0 +1,13 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.buttonFruits .buttonVegetables .buttonOrganics .buttonRices{
+    background: transparent !important;
+}
