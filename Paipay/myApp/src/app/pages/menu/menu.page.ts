@@ -12,11 +12,19 @@ export class MenuPage implements OnInit {
   pages = [
     {
       title:'Mi Cuenta',
-      url: '/menu/myAccount',
+      url: '/menu/my-account',
     },
     {
       title:'Mis Compras',
-      url:'/menu/myCart',
+      url:'/menu/my-cart',
+    },
+    {
+      title:'Mis Puntos',
+      url: '/menu/my-points',
+    },
+    {
+      title:'Contacto',
+      url:'/menu/contact',
     }
   ];
 

@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
   	<ion-buttons class="left" slot="start">
   		<ion-button>
-  			<ion-icon name="arrow-round-back"></ion-icon>
+  			<ion-icon name="arrow-round-back" [routerLink]="['/login']"></ion-icon>
   		</ion-button>
   </ion-buttons>
   <ion-buttons slot="end">
@@ -22,51 +22,41 @@
 
 <ion-content fullscreen  class= "bg-image" scrollX="false" padding>
     
-  <div class="logo1">
-    <figure>
-      <ion-img src="assets/logos/logo2.png"></ion-img>
-      </figure>
-    </div>
-  
-  <div scrollY="true">
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <button class="buttonFruits">
-                <img src="assets/icon/iconFruits.png">
-                <p>Frutas</p>
-              </button>
-            </ion-col>
-          </ion-row>
-          
-          <ion-row>
-            <ion-col>
-              <button class="buttonVegetables">
-                <img src="assets/icon/iconVegetables.png"  >
-                <p>Verduras</p>
-              </button>
-            </ion-col>
-          </ion-row>
-      
-          <ion-row>
-            <ion-col>
-              <button class="buttonOrganics">
-                <img src="assets/icon/iconOrganics.png" >
-                <p>Orgánico</p>
-              </button>
-            </ion-col>
-          </ion-row>
-      
-          <ion-row>
-            <ion-col>
-              <button class="buttonRices">
-                <img src="assets/icon/iconRice.png" >
-                <p>Arroz</p>
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        </div>
+ 
+<div class="options" scrollY="true">
+
+  <div class="fruits">
+    <button class="buttonFruits" [routerLink]="['/fruits']">
+      <img src="assets/icon/iconFruits.png" >
+      <label class="fruitsLabel">Frutas</label>
+    </button>
+  </div>
+
+  <div class="vegetables">
+    <button class="buttonVegetables" [routerLink]="['/vegetables']">
+      <img src="assets/icon/iconVegetables.png">
+      <label class="vegetablesLabel">Verduras</label>
+    </button>
+  </div>
+
+  <div class="organics">
+    <button class="buttonOrganics" [routerLink]="['/organics']">
+      <img src="assets/icon/iconOrganics.png">
+      <label class="organicsLabel">Orgánico</label>
+    </button>
+  </div>
+
+  <div class="rices">
+    <button class="buttonRices" [routerLink]="['/rices']">
+      <img src="assets/icon/iconRices.png">
+      <label class="ricesLabel">Arroz</label>
+    
+    </button>
+  </div>
+
+
+
+  </div>
 
  
 </ion-content>

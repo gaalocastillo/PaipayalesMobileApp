@@ -6,9 +6,6 @@ ion-toolbar {
 ion-content{
     --background: url("src/assets/backgrounds/introBackground.jpg") no-repeat center center fixed cover;;
     --background-size: cover;
-  
-
-
 }
 
 .bg-image {
@@ -38,11 +35,17 @@ ion-content{
     transform:translateY(-50%);
 }
 
+.logoSlogan{
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 240px;
+}
+
 .jumpIntro{
-
-color: #402208;
-size: 12px;
-font-family: "Century Gothic";
-
+    font-family: "Century Gothic";
+    font-weight: bold;
+    size:12em;
+    color: #402208;
 }
 

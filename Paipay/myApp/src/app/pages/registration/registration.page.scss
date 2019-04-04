@@ -8,3 +8,156 @@ ion-content{
     background-size: cover;
 } 
 
+.return{
+    position: relative;
+    top: 10px ;
+    // left:19px;
+    height: 16px;
+    width: 13px;
+}
+
+.logoBlock{
+    position: relative; 
+    top:66px;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.logo2{
+    position: relative;
+    top: 92.21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrationLogo{
+    height: 51.33px;
+}
+
+.addAvatar{
+    position: relative;
+    top: 132.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    text-align: center;
+}
+
+.avatarLabel{
+    font-family: "Century Gothic";
+    font-weight: bold;
+    size:12.48px;
+    color: #3B2508;  
+}
+
+.name{
+    position: relative;
+    top: 152.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nameInput {
+    background-color: #3B2508!important;
+    opacity: 100% !important;
+    width: 315.98px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Century Gothic";
+    color: white;
+    size: 12.43em;
+}
+
+.phone{
+    position: relative;
+    top: 162.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phoneInput {
+    background-color: #3B2508!important;
+    opacity: 100% !important;
+    width: 315.98px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Century Gothic";
+    color: white;
+    size: 12.43em;
+}
+
+.mail{
+    position: relative;
+    top: 172.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailInput {
+    background-color: #3B2508!important;
+    opacity: 100% !important;
+    width: 315.98px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Century Gothic";
+    color: white;
+    size: 12.43em;
+}
+
+.password{
+    position: relative;
+    top: 182.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordInput {
+    background-color: #3B2508!important;
+    opacity: 100% !important;
+    width: 315.98px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Century Gothic";
+    color: white;
+    size: 12.43em;
+}
+
+.continue{
+    position: relative;
+    top: 220.21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-button{
+    fill: transparent;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    width:163.22px;
+    height:38.7px;
+}
+
+
+.continueIcon{
+    margin-left: auto;
+    margin-right: auto;
+    width:163.22px;
+    height:38.7px;
+}
+

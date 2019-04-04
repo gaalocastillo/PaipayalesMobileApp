@@ -8,22 +8,74 @@ ion-content{
     background-size: cover;
 } 
 
+.return{
+    position: relative;
+    top: 10px ;
+    left:19px;
+    height: 16px;
+    width: 13px;
+}
+
+.logoBlock{
+    position: relative; 
+    top:66px;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label{
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .labelPass {
     color: #3B2508;
     font-family: "Century Gothic";
-    size: 16px;
-    
+    size: 16px; 
+}
+
+.email{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:186.04px;
 }
 
 .email-input {
     background-color: transparent !important;
-    text-align: center;
+    text-align: left;
     border-bottom: 23px;
+    border-style:none none solid none;;
+    border-bottom-width: 1px;
+    border-bottom-color: #3B2508;
+    width: 305.87px;
+}
+
+.button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:270.25px;
 }
 .retrivePass {
     background-color: transparent;
     text-align: center !important;
     display: inline-block;
-    align-content: center !important;
-    
+    align-content: center !important; 
+
+}
+
+.retriveIcon{
+    margin-left: auto;
+    margin-right: auto;
+    width:163.22px;
+    height:38.7px;
 }

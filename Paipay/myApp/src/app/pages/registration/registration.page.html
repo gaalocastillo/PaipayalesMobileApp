@@ -1,50 +1,47 @@
 <ion-content fullscreen  class= "bg-image" scrollX="false" padding>
-    <!-- logo block -->
-  <div class="logo1">
-      <figure>
-        <ion-img src="assets/logos/logo2.png"></ion-img>
-      </figure>
-    </div>
+  <div>
+    <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
+  </div>
 
-    <div class="logo2">
-        <figure>
-          <ion-img src="assets/registration.png"></ion-img>
-        </figure>
-      </div>
+   <!-- logo block -->
+  <div class="logoBlock">
+    <ion-img class="logo"  src="assets/logos/logo2.png" style="height:75px;width: 150px;"></ion-img>
+  </div>
 
-    <ion-grid>
-			        
-        <ion-row>
-          <ion-col>
-            <ion-input placeholder="Nombre y Apellido"></ion-input>
-          </ion-col>
-        </ion-row>
-    
-        <ion-row>
-          <ion-col>
-            <ion-input placeholder="Teléfono"></ion-input>
-          </ion-col>
-        </ion-row>
-    
-        <ion-row>
-          <ion-col>
-            <ion-input class="mail" type="email" placeholder="Correo Electrónico"></ion-input>
-          </ion-col>
-        </ion-row>
 
-        <ion-row>
-            <ion-col>
-              <ion-input class="mail" type="password" placeholder="Contraseña"></ion-input>
-            </ion-col>
-          </ion-row>
-  
-    
-      </ion-grid>
+  <div class="logo2">
+    <ion-img class="registrationLogo" src="assets/misc/registration.png"></ion-img>
+  </div>
 
-    <div>
-      <button style=" background-color: transparent !important;" [routerLink]="['/products-menu']" >
-        <img src="assets/buttons/continueRegistration.png" alt="">
-      </button>
-    </div>
+  <div class="addAvatar">
+    <ion-avatar class="avatar">
+      <img src="assets/avatar/registrationAvatar.png">
+    </ion-avatar> <br>
+    <ion-label class="avatarLabel">Añadir foto</ion-label>
+  </div>
+
+
+  <div class="name">
+    <ion-input class="nameInput" placeholder="Nombre y Apellido"></ion-input>
+  </div>
+
+  <div class="phone">
+    <ion-input class="phoneInput" placeholder="Teléfono"></ion-input>
+  </div>
+
+  <div class="mail">
+    <ion-input class="mailInput" type="email" placeholder="Correo Electrónico"></ion-input>
+  </div>
+
+  <div class="password">
+    <ion-input class="passwordInput" type="password" placeholder="Contraseña"></ion-input>
+  </div>
+
+
+  <div class="continue">
+    <button class="continue-button" [routerLink]="['/adress']" >
+      <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
+    </button>
+  </div>
 
 </ion-content>

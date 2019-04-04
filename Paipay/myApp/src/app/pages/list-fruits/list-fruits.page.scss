@@ -1,0 +1,74 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.return{
+    position: relative;
+    top: 24px;
+    left:19px;
+    height: 16px;
+    width: 13px;
+}
+
+.logoBlock{
+    position: relative; 
+    top:20px;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.productItem {
+    fill: transparent;
+    background: transparent !important; 
+}
+
+item-native{
+    fill: transparent;
+    background: transparent !important; 
+}
+
+
+.productImage{
+    fill: transparent;
+    --background: transparent !important; 
+    color: transparent !important;
+    width: 75.8px;
+    height: 54.92px;
+}
+
+
+.continue{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continueBuying-button .endBuying-button{
+    fill: transparent;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    width:128px;
+    height:38.7px;
+}
+
+
+.continueBuyingIcon .endBuyingIcon{
+    margin-left: auto;
+    margin-right: auto;
+    width:128px;
+    height:38.7px;
+}

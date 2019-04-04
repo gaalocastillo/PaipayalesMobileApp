@@ -1,9 +1,76 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>fruits</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons class="left" slot="start">
+        <ion-button [routerLink]="['/menu/products-menu']">
+          <ion-icon name="arrow-round-back" ></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content padding>
+
+
+  
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+
+  <!-- logo block -->
+  <div class="logoBlock">  
+    <div class="fruitsIcon">
+      <div style="display:flexbox; text-align: center;">
+          <ion-img class="logo" src="assets/icon/iconFruits.png" ></ion-img>
+          <label class="fruitsLabel">FRUTAS</label>
+      </div >
+      <div style="position: relative; top: 88px;">
+        <ion-img class="list" src="assets/icon/38-02.png" [routerLink]="['/list-fruits']"></ion-img>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- <div class="fruitsGrid">
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button class="buttonFruits" [routerLink]="['/balance']">
+                  <img src="assets/fruits/58-02.png" style="background: transparent !important; height: 88px; width: 68px;">
+                  <p>Ciruela</p>
+                </button>
+              </ion-col>
+    
+                <ion-col>
+                  <button class="buttonFruits" [routerLink]="['/balance']">
+                    <img src="assets/fruits/59-02.png" style="background: transparent !important; height: 88px; width: 68px;">
+                    <p>Guaba</p>
+                  </button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                  <ion-col>
+                    <button class="buttonFruits" [routerLink]="['/balance']">
+                      <img src="assets/fruits/68-02.png" style="background: transparent !important; height: 88px; width: 68px;">
+                      <p>Guayaba</p>
+                    </button>
+                  </ion-col>
+
+                    <ion-col>
+                      <button class="buttonFruits" [routerLink]="['/balance']">
+                        <img src="assets/fruits/61-02.png" style="background: transparent !important; height: 88px; width: 68px;">
+                        <p>Limón</p>
+                      </button>
+                    </ion-col>
+                  </ion-row>
+          </ion-grid>
+    </div> -->
 
 </ion-content>

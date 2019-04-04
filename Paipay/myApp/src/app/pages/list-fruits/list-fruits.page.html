@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons class="left" slot="start">
+        <ion-button>
+          <ion-icon name="arrow-round-back" [routerLink]="['/menu/products-menu']"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+
+    <!-- logo block -->
+    <div class="logoBlock">
+      <ion-img class="logo"  src="assets/fruits/35-02.png" ></ion-img>
+    </div>
+      
+    <!-- style="height:75px;width: 150px;" -->
+
+    <ion-list style=" background: transparent !important; " padding *ngFor="let item of items">
+        <ion-item class="productItem" >
+            <img class="productImage" src="{{item.img}}">
+            <div style="display:block; width: 100px;">
+              <p>{{item.price}} </p>
+              <p>{{item.name}} </p>
+            </div>
+            <div>
+              <input id="md-fruit" mobiscroll-stepper ng-model="primary" type="number" data-role="stepper" min="1" value="1" max="15" />
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <div class="continue">
+        <button class="continueBuying-button" [routerLink]="['/list-fruits']" >
+          <ion-img class="continueBuyingIcon" src="assets/buttons/continueBuying.png" alt="" ></ion-img>
+        </button>
+
+        <button class="endBuying-button" [routerLink]="['/menu/products-menu']" >
+          <ion-img class="endBuyingIcon" src="assets/buttons/endBuying.png" alt="" ></ion-img>
+        </button>
+    </div>
+
+    
+
+</ion-content>

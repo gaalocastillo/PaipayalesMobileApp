@@ -12,13 +12,15 @@ const routes: Routes = [
     path: '',
     component: MenuPage,
     children: [
-      { path: 'my-account', loadChildren: './my-account/my-account.module#MyAccountPageModule'},
+      { path: 'my-account', loadChildren: './pages/my-account/my-account.module#MyAccountPageModule' },
       { path: 'my-cart', loadChildren: './my-cart/my-cart.module#MyCartPageModule'},
+      { path: 'my-points', loadChildren: './pages/my-points/my-points.module#MyPointsPageModule' },
+      { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
       { path: 'products-menu', loadChildren: './pages/products-menu/products-menu.module#ProductsMenuPageModule' },
-      { path: 'fruits', loadChildren: './fruits/fruits.module#FruitsPageModule' },
-      { path: 'vegetables', loadChildren: './pages/vegetables/vegetables.module#VegetablesPageModule' },
-      { path: 'organics', loadChildren: './pages/organics/organics.module#OrganicsPageModule' },
-      { path: 'rices', loadChildren: './pages/rices/rices.module#RicesPageModule' }
+      { path: 'fruits', loadChildren: './pages/fruits/fruits.module#FruitsPageModule' },
+  { path: 'vegetables', loadChildren: './pages/vegetables/vegetables.module#VegetablesPageModule' },
+  { path: 'organics', loadChildren: './pages/organics/organics.module#OrganicsPageModule' },
+  { path: 'rices', loadChildren: './pages/rices/rices.module#RicesPageModule' }
     ]
   },
   {

@@ -1,0 +1,28 @@
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+    
+  <div>
+    <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
+  </div>
+    
+  <!-- logo block -->
+  <div class="logo1">
+    <ion-img src="assets/logos/logo2.png"></ion-img>
+  </div>
+
+
+    <div class="list">
+      <ion-list style=" background: transparent !important; " padding *ngFor = "let item of items">
+        <ion-item >
+            <label>{{item.name}}</label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+  <div class="continueBtn">
+    <button style=" background-color: transparent !important;" [routerLink]="['/menu/products-menu']" >
+      <img src="assets/buttons/continueLogin.png" alt="" style="height:39px;width:163.47px;">
+    </button>
+  </div>
+
+</ion-content>

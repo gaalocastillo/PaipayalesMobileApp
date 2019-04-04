@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>rices</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons class="left" slot="start">
+        <ion-button [routerLink]="['/menu/products-menu']">
+          <ion-icon name="arrow-round-back" ></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+  
+    <!-- logo block -->
+    <div class="logoBlock">  
+        <div class="ricesIcon">
+          <div style="display:flexbox; text-align: center;">
+              <ion-img class="logo" src="assets/icon/iconRices.png" ></ion-img>
+              <label class="ricesLabel">ARROZ</label>
+          </div >
+          <div style="position: relative; top: 88px;">
+            <ion-img class="list" src="assets/icon/38-02.png" [routerLink]="['/list-fruits']"></ion-img>
+          </div>
+        </div>
+      </div>
 
-<ion-content padding>
 
 </ion-content>

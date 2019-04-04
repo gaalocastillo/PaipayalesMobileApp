@@ -1,0 +1,54 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.return{
+    position: relative;
+    top: 10px ;
+    // left:19px;
+    height: 16px;
+    width: 13px;
+}
+
+.logo1{
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 66px;
+    left: 113px;
+    height: 80px;
+    width: 150px;
+}
+
+.scrollable{
+    height: 200px;
+}
+
+.list{
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 106px;
+    left:40px;
+    height: 80px;
+    width: 150px;
+}
+
+.continueBtn{
+    display: inline-block;
+    position: absolute;
+    top: 575px;
+    left:98px;
+    
+}

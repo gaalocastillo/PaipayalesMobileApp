@@ -1,0 +1,45 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.logoBlock{
+    position: relative;
+    top: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vegetablesIcon{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    height: 88px; 
+    width: 68px;
+}
+
+.vegetablesLabel{
+    font-family: "Century Gothic";
+    text-align: center;
+    size:15.77em;
+    color: #00852A;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list{
+    height: 20.78px; 
+    width: 20.78px;
+}
