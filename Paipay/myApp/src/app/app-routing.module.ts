@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'registration', loadChildren: './pages/registration/registration.module#RegistrationPageModule' },
   { path: 'forgottenpass', loadChildren: './pages/forgottenpass/forgottenpass.module#ForgottenpassPageModule' },
   { path: 'products-menu', loadChildren: './pages/products-menu/products-menu.module#ProductsMenuPageModule' },
-  // { path: 'my-account', loadChildren: './pages/my-account/my-account.module#MyAccountPageModule' },
+  { path: 'my-account', loadChildren: './pages/my-account/my-account.module#MyAccountPageModule' },
   { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'my-cart', loadChildren: './pages/my-cart/my-cart.module#MyCartPageModule' },
   { path: 'fruits', loadChildren: './pages/fruits/fruits.module#FruitsPageModule' },
@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'adress', loadChildren: './pages/adress/adress.module#AdressPageModule' },
   { path: 'balance', loadChildren: './pages/balance/balance.module#BalancePageModule' },
   { path: 'list-fruits', loadChildren: './pages/list-fruits/list-fruits.module#ListFruitsPageModule' },
+  { path: 'order', loadChildren: './pages/order/order.module#OrderPageModule' },
 ];
 
 @NgModule({

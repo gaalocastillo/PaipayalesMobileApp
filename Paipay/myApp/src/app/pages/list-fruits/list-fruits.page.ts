@@ -9,8 +9,6 @@ export class ListFruitsPage implements OnInit {
 
   public items: Array<any>;
 
-
-
   constructor() { 
 
 
@@ -27,6 +25,8 @@ export class ListFruitsPage implements OnInit {
           { img: 'assets/fruits/67-02.png', name: 'Mango de chupar',price:'1 Libra $1,00' }
       ];
   
+
+      
 
   }
 

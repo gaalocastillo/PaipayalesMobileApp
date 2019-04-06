@@ -27,8 +27,8 @@ ion-content{
 }
 
 
-
 .productItem {
+    --ion-item-background-color-active:red;
     fill: transparent;
     background: transparent !important; 
 }
@@ -38,6 +38,27 @@ item-native{
     background: transparent !important; 
 }
 
+ion-item{
+    --background: var(--ion-item-background,var(--ion-background-color,transparent));
+}
+
+.imgItem{
+    height:53.06px ;
+    width: 89.9px ;
+}
+
+.priceItem{
+    font-family: "Century Gothic";
+    size: 15.73em;
+    color: #402208;
+}
+
+.nameItem{
+    font-family:"Century Gothic";
+    size:18em;
+    color: #402208;
+    font-weight: bold;
+}
 
 .productImage{
     fill: transparent;
@@ -47,28 +68,40 @@ item-native{
     height: 54.92px;
 }
 
-
 .continue{
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent !important;
 }
 
-.continueBuying-button .endBuying-button{
+
+.continueBuying-button {
     fill: transparent;
-    background-color: transparent;
+    background-color: transparent !important;
     margin-left: auto;
     margin-right: auto;
-    border: none;
-    width:128px;
-    height:38.7px;
+
+    // border: none;
+    // width:28px;
+    // height:38.7px;
 }
 
+.endBuying-button{
+    fill: transparent;
+    background-color: transparent !important;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
 .continueBuyingIcon .endBuyingIcon{
-    margin-left: auto;
-    margin-right: auto;
-    width:128px;
-    height:38.7px;
+    fill: transparent;
+    background-color: transparent !important;
+    width: 128px;
+    height: 15px;
 }
+
+
+
