@@ -37,40 +37,20 @@
   </div>
 
 
-    <!-- <div class="fruitsGrid">
-        <ion-grid>
-            <ion-row>
-              <ion-col>
-                <button class="buttonFruits" [routerLink]="['/balance']">
-                  <img src="assets/fruits/58-02.png" style="background: transparent !important; height: 88px; width: 68px;">
-                  <p>Ciruela</p>
-                </button>
-              </ion-col>
-    
-                <ion-col>
-                  <button class="buttonFruits" [routerLink]="['/balance']">
-                    <img src="assets/fruits/59-02.png" style="background: transparent !important; height: 88px; width: 68px;">
-                    <p>Guaba</p>
-                  </button>
-                </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col>
-                    <button class="buttonFruits" [routerLink]="['/balance']">
-                      <img src="assets/fruits/68-02.png" style="background: transparent !important; height: 88px; width: 68px;">
-                      <p>Guayaba</p>
-                    </button>
-                  </ion-col>
-
-                    <ion-col>
-                      <button class="buttonFruits" [routerLink]="['/balance']">
-                        <img src="assets/fruits/61-02.png" style="background: transparent !important; height: 88px; width: 68px;">
-                        <p>Limón</p>
-                      </button>
-                    </ion-col>
-                  </ion-row>
-          </ion-grid>
-    </div> -->
-
+   
 </ion-content>
+
+
+<ion-footer >
+  <ion-toolbar class="options">
+      <button class="vegBtn" [routerLink]="['/vegetables']">
+        <img class="vegIcon" src="assets/icon/iconVegetablesWhite.png">
+      </button>
+      <button class="orgBtn" [routerLink]="['/organics']">
+        <img class="orgIcon" src="assets/icon/iconOrganicsWhite.png">
+      </button>
+      <button class="riBtn" [routerLink]="['/rices']">
+        <img class="riIcon" src="assets/icon/iconRicesWhite.png">
+      </button>
+  </ion-toolbar>
+</ion-footer>

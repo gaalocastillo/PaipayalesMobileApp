@@ -1,0 +1,75 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.pointsLabel{
+    position: relative; 
+    top:66px;
+    background-color: #547E1A;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 34.26px;
+}
+
+.points{
+    font-family: "Century Gothic";
+    font-weight: bold;
+    text-align: center;
+    size:18em;
+    color: white;
+    
+}
+
+// ion-footer{
+//     --background-color: #547E1A;
+//     justify-content: center;
+//     align-items: center;
+
+// }
+
+.options{
+    display: flex;
+    --background: var(--ion-toolbar-background,var(--background-color,transparent));
+    --background-color: #547E1A;
+}
+
+.vegBtn{
+   background-color: transparent !important; 
+   fill: transparent;
+}
+
+.vegIcon{
+    height: 19px;
+    width: 24px;
+}
+
+.orgBtn{
+    background-color: transparent !important; 
+    fill: transparent;
+}
+ 
+.riBtn{
+    background-color: transparent !important; 
+    fill: transparent;
+}
+ 
+
+.orgIcon{
+    height: 19px;
+    width: 24px;
+}
+
+.riIcon{
+    height: 19px;
+    width: 24px;
+}

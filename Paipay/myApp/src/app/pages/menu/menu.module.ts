@@ -18,9 +18,9 @@ const routes: Routes = [
       { path: 'contact', loadChildren: '../contact/contact.module#ContactPageModule' },
       { path: 'products-menu', loadChildren: '../products-menu/products-menu.module#ProductsMenuPageModule' },
       { path: 'fruits', loadChildren: '../fruits/fruits.module#FruitsPageModule' },
-  { path: 'vegetables', loadChildren: '../vegetables/vegetables.module#VegetablesPageModule' },
-  { path: 'organics', loadChildren: '../organics/organics.module#OrganicsPageModule' },
-  { path: 'rices', loadChildren: '../rices/rices.module#RicesPageModule' }
+      { path: 'vegetables', loadChildren: '../vegetables/vegetables.module#VegetablesPageModule' },
+      { path: 'organics', loadChildren: '../organics/organics.module#OrganicsPageModule' },
+      { path: 'rices', loadChildren: '../rices/rices.module#RicesPageModule' }
     ]
   },
   {
