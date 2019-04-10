@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,19 +10,17 @@ import { NavController } from '@ionic/angular';
 })
 export class AdressPage implements OnInit {
 
-  public items: Array<any>;
+  private items  = []; 
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
-      this.items = [
-      {name:"Casa Laguna"},
-      {name:"Compostela"},
-      {name:"La Joya"},
-      {name:"La Rioja"},
-      {name:"Plaza Madeira"},
-      {name:"Sta. María Casa Grande"}
-    ];
+    this.http.get('http://localhost:9000/api/v1/userZones/').subscribe((response : any[]) => {
+    console.log(response);
+    this.items = response;
+    });
+
+
   
    }
 

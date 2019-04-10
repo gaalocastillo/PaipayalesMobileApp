@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -23,11 +24,16 @@ const routes: Routes = [
   { path: 'balance', loadChildren: './pages/balance/balance.module#BalancePageModule' },
   { path: 'list-fruits', loadChildren: './pages/list-fruits/list-fruits.module#ListFruitsPageModule' },
   { path: 'order', loadChildren: './pages/order/order.module#OrderPageModule' },
+  { path: 'list-vegetables', loadChildren: './pages/list-vegetables/list-vegetables.module#ListVegetablesPageModule' },
+  { path: 'list-organics', loadChildren: './pages/list-organics/list-organics.module#ListOrganicsPageModule' },
+  { path: 'list-rices', loadChildren: './pages/list-rices/list-rices.module#ListRicesPageModule' },
 ];
 
 @NgModule({
   imports: [
+    HttpClientModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    
   ],
   exports: [RouterModule]
 })
