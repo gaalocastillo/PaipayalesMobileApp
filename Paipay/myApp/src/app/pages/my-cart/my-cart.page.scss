@@ -1,0 +1,81 @@
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.labelOrder{
+    background-color: #547E1A;
+    text-align: center;
+    margin: none;
+    padding: none;
+
+
+}
+
+.label{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 18px;
+    color: white;
+}
+
+.labelSubtotal {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 18px;
+    color: #402208;
+}
+
+.labelTransport{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 18px;
+    color: #402208;
+}
+
+
+.labelTotal{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 18px;
+    color: #402208;
+}
+
+
+.total{
+    display: block;      
+    height: 80px;  
+}
+
+.continue{
+    position: relative;
+    top: 20.21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.continue-button{
+    fill: transparent;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    width:163.22px;
+    height:38.7px;
+}
+
+
+.continueIcon{
+    margin-left: auto;
+    margin-right: auto;
+    width:163.22px;
+    height:38.7px;
+}
+

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{ HttpClient } from '@angular/common/http';
+import { NavController, NavParams} from '@ionic/angular';
 
 @Component({
   selector: 'app-list-fruits',
@@ -7,28 +9,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFruitsPage implements OnInit {
 
-  public items: Array<any>;
+  public items  = []; 
+  qty:any;
 
-  constructor() { 
+  constructor( private http: HttpClient) { 
+    
+    this.qty = 1;
 
-
-      this.items = [
-          { img: 'assets/fruits/58-02.png', name: 'Ciruela', price:'1 Libra $1,00' },
-          { img: 'assets/fruits/59-02.png', name: 'Guaba', price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/60-02.png', name: 'Guayaba',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/61-02.png', name: 'Limón',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/62-02.png', name: 'Mango paipay',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/63-02.png', name: 'Naranja',price:'1 Libra $1,00' },
-          { img: 'assets/fruits/64-02.png', name: 'Tamarindo',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/65-02.png', name: 'Plátano verde',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/66-02.png', name: 'Plátano',price:'1 Libra $1,00'  },
-          { img: 'assets/fruits/67-02.png', name: 'Mango de chupar',price:'1 Libra $1,00' }
-      ];
+    this.http.get('http://127.0.0.1:9000/api/v1/products/fruits').subscribe((response : any[]) => {
+      console.log(response);
+      this.items = response;
+      });
   
-
+  
+      
+    
       
 
   }
+
+
+  incrementQty() {
+    //console.log(this.qty+1);
+    this.qty += 1;
+  }
+  // decrement product qty
+
+  decrementQty() {
+    
+    if(this.qty-1 < 1 ){
+      //console.log(‘1->’+this.qty);
+      this.qty = 1;
+    }else{
+      this.qty -= 1;
+    //console.log(‘2->’+this.qty);
+    } 
+  }
+
+
+  
 
   ngOnInit() {
   }

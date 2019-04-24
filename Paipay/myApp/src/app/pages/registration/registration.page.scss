@@ -41,14 +41,21 @@ ion-content{
 
 .addAvatar{
     position: relative;
-    top: 132.89px;
+    top: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.avatarInfo{
+    display: flexbox;
+    align-items: center;
+}
+
 .avatar{
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .avatarLabel{
@@ -141,6 +148,7 @@ ion-content{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: auto;
 }
 
 .continue-button{

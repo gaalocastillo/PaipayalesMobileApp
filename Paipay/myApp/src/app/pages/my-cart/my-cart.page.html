@@ -4,10 +4,41 @@
           <ion-menu-button>
           </ion-menu-button>
         </ion-buttons>
-    <ion-title>myCart</ion-title>
+    <!-- <ion-title>myCart</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
 
-</ion-content>
+  <div class="labelOrder">
+    <label class="label">LISTA DE PEDIDO</label>
+  </div>
+
+  <div style="height:300px;">
+    <!-- TODO: load the order items -->
+  </div>
+
+  <div class="total">
+    <label class="labelSubtotal">
+      Sub Total:
+    </label> <br>
+    <label class="labelTransport">
+      Envio:
+    </label> <br>
+    <label class="labelTotal">
+      Total: 
+    </label>
+  </div>
+
+  <div>
+    <img src="assets/misc/3-02.png">
+  </div>
+  
+    <div class="continue">
+      <button class="continue-button" [routerLink]="['/confirmation']" >
+        <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
+      </button>
+    </div>
+  
+  </ion-content>
+  

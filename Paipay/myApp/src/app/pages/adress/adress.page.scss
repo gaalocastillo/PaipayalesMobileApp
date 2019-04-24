@@ -31,22 +31,52 @@ ion-content{
     width: 150px;
 }
 
-.scrollable{
-    height: 200px;
+// .scrollable{
+//     height: 200px;
+// }
+
+.adressZones{
+    position: relative;
+    top:140px;
+    display: block;
+    background-color: #402208;
+    height: 10em;
+    
+}
+
+.zoneSelection{
+    font-family: 'Century Gothic';
+    size: 18em;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    height: 150px;
 }
 
 .list{
     text-align: center;
-    display: inline-block;
-    position: absolute;
-    top: 106px;
-    left:40px;
-    height: 80px;
-    width: 150px;
+    position: relative;
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #402208;
+    --opacity: 0.5 !important;
+    padding-right: inherit;
+    padding-left: inherit;
+}
+
+.productItem{
+    --background: var(--ion-item-background,var(--ion-background-color,#402208));
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 13.56px;
+    color:white;
+
 }
 
 .continueBtn{
-    display: inline-block;
+    display: flexbox;
     position: absolute;
     top: 575px;
     left:98px;

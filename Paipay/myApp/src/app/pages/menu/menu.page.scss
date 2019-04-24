@@ -6,3 +6,37 @@
 .menuHeader{
     background-color: #402208  !important;
 }
+
+
+.userName{
+    font-family: 'Century Gothic';
+    font-size: 17.21px;
+    font-weight: bold;
+    color: white;
+}
+
+.optionsMenu{
+    font-family: 'Century Gothic';
+    font-size: 17.21px;
+    font-weight: bold;
+    color: white;
+}
+
+ion-toolbar{
+    --background: var(--ion-toolbar-background,var(--ion-background-color,#402208));
+}
+
+ion-content{
+    // background-color: #402208 !important;
+    --background: var(--ion-background-color,#402208) !important;
+    --background: var(--ion-item-background,var(--ion-background-color,#402208)) !important;
+}
+
+ion-item{
+   --background: var(--ion-item-background,var(--ion-background-color,transparent))!important; 
+}
+
+.listOptions{
+    background-color: #402208 !important;
+    --background: var(--ion-item-background,var(--ion-background-color,transparent)) !important;
+}

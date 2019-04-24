@@ -1,0 +1,19 @@
+ion-content{
+    --background: url("src/assets/backgrounds/confirmationBackground.png") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/confirmationBackground.png") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.whattApp{
+    position: relative;
+    top: 500px;
+    text-align: center;
+}
+
+.whattAppLogo{
+    height: 51.8px;
+}

@@ -35,10 +35,12 @@
         <ion-item class="productItem" *ngFor="let item of items">
           <img class="imgItem" src="{{item.img}}">
           <p style="text-align:center;">
-          <label class="priceItem">{{item.price}}</label>
+          <label class="priceItem">{{item.price}} </label>
           <br>
           <label class="nameItem">{{item.name}}</label>
           </p>
+          <button clear (click)="incrementQty()"><ion-icon name="add-circle" ></ion-icon></button>{{qty}}
+          <button clear (click)="decrementQty()"><ion-icon name="remove-circle" ></ion-icon></button>
         </ion-item>
       </ion-list>
     </div>

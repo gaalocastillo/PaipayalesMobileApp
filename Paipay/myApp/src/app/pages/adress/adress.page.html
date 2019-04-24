@@ -1,4 +1,4 @@
-<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false"  padding>
     
   <div>
     <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
@@ -10,13 +10,39 @@
   </div>
 
 
-    <div class="list">
-      <ion-list style=" background: transparent !important; " padding *ngFor = "let item of items">
-        <ion-item >
-            <label>{{item.name}}</label>
-        </ion-item>
-      </ion-list>
-    </div>
+  <div class="adressZones">
+    <label class="zoneSelection">SELECCIONA TU SECTOR</label>
+      <ion-virtual-scroll [items]="items">
+      <ion-item class="productItem" *virtualItem="let item">
+        {{ item.name }}
+      </ion-item>
+    </ion-virtual-scroll>
+  </div>
+
+
+
+
+
+
+<!-- 
+  <div class="adressZones" >
+    <label class="zoneSelection">SELECCIONA TU SECTOR</label>
+        <ion-list class="list"  padding >
+            <ion-item class="productItem" *ngFor="let item of items">
+              <label class="nameItem">{{item.name}}</label>
+            </ion-item>
+          </ion-list>
+  </div> --> -->
+
+
+  <!-- <div>
+    <ion-virtual-scroll [items]="items">
+      <ion-item *virtualItem="let item">
+        {{ item.name }}
+      </ion-item>
+    </ion-virtual-scroll>
+  </div> -->
+
 
 
   <div class="continueBtn">

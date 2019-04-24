@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'list-vegetables', loadChildren: './pages/list-vegetables/list-vegetables.module#ListVegetablesPageModule' },
   { path: 'list-organics', loadChildren: './pages/list-organics/list-organics.module#ListOrganicsPageModule' },
   { path: 'list-rices', loadChildren: './pages/list-rices/list-rices.module#ListRicesPageModule' },
+  { path: 'confirmation', loadChildren: './pages/confirmation/confirmation.module#ConfirmationPageModule' },
 ];
 
 @NgModule({

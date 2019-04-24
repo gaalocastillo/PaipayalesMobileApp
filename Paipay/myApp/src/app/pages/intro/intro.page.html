@@ -1,14 +1,9 @@
-<ion-header no-border>
-  <ion-toolbar style="--background: transparent">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/login']"> 
-        <label class="jumpIntro" >Saltar intro</label>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content fullscreen class= "bg-image" scrollY="false">
+
+  <div class="jumpIntro">
+    <img  class="loginBtn" src="assets/buttons/jumpIntro.png" >
+  </div>
+
   <div class="home-container row-center img" >
       <img class="logoSlogan"  src="../assets/logos/logoSlogan.png" [routerLink]="['/history']">
   </div>

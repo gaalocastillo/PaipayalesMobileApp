@@ -4,14 +4,17 @@
 		
 		<ion-header class="menuHeader">
 			<ion-toolbar>
-				<ion-title>M</ion-title>
+				<ion-avatar class="avatar">
+					<img src="assets/avatar/registrationAvatar.png">
+				</ion-avatar> 
+				<ion-title class="userName"> Anita Ocampo </ion-title>
 			</ion-toolbar>
 		</ion-header>
 
 		<ion-content>
-			<ion-list>
+			<ion-list class="listOptions">
 				<ion-menu-toggle menu="end" auto-hide="false" *ngFor="let p of pages" >
-					<ion-item [routerLink]="p.url" [routerDirection]="root" [class.active-item]= "selectedPath === p.url"> <!-- tell angular its a value that needs to be get from-->
+					<ion-item class="optionsMenu" [routerLink]="p.url" [routerDirection]="root" [class.active-item]= "selectedPath === p.url"> <!-- tell angular its a value that needs to be get from-->
 						{{p.title}}
 					</ion-item>
 				</ion-menu-toggle>
