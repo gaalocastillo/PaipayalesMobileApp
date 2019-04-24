@@ -43,3 +43,38 @@ ion-content{
     height: 20.78px; 
     width: 20.78px;
 }
+
+
+
+
+.options{
+    --background: var(--ion-toolbar-background,var(--ion-background-color,#547E1A)) !important;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.fruBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+}
+.orgBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 50px;
+    width: 50px;
+}
+.riBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
+
+// ion-footer{
+//     --background: var(--ion-toolbar-background,var(--ion-background-color,transparent))!important;
+// }

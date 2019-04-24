@@ -1,3 +1,9 @@
+ion-toolbar{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#402208));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
 ion-content{
     --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
     --background-size: cover;
@@ -48,4 +54,41 @@ ion-content{
     position: absolute;
     top: 255px;
     left: 65px;
+}
+
+
+.options{
+    background-color: #547E1A !important;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.vegBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 45px;
+    width: 45px;
+    margin-right: 50px;
+}
+.orgBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 50px;
+    width: 50px;
+}
+.riBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
+
+ion-footer{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#547E1A));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+
 }

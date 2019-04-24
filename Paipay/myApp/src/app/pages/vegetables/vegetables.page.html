@@ -14,10 +14,8 @@
       </ion-button>
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
-
 
 
   
@@ -37,3 +35,18 @@
       </div>
 
 </ion-content>
+
+
+<ion-footer >
+  <ion-toolbar class="options">
+      <button class="fruBtn" [routerLink]="['/fruits']">
+        <img class="fruIcon" src="assets/icon/iconFruitsWhite.png">
+      </button>
+      <button class="orgBtn" [routerLink]="['/organics']">
+        <img class="orgIcon" src="assets/icon/iconOrganicsWhite.png">
+      </button>
+      <button class="riBtn" [routerLink]="['/rices']">
+        <img class="riIcon" src="assets/icon/iconRicesWhite.png">
+      </button>
+  </ion-toolbar>
+</ion-footer>

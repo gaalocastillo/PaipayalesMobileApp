@@ -35,3 +35,17 @@
 
 
 </ion-content>
+
+<ion-footer >
+  <ion-toolbar class="options">
+      <button class="fruBtn" [routerLink]="['/fruits']">
+        <img class="fruIcon" src="assets/icon/iconFruitsWhite.png">
+      </button>
+      <button class="vegBtn" [routerLink]="['/vegetables']">
+        <img class="vegIcon" src="assets/icon/iconVegetablesWhite.png">
+      </button>
+      <button class="orgBtn" [routerLink]="['/organics']">
+        <img class="orgIcon" src="assets/icon/iconOrganicsWhite.png">
+      </button>
+  </ion-toolbar>
+</ion-footer>
