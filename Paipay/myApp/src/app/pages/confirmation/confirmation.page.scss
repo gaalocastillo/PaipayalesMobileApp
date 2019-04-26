@@ -8,9 +8,19 @@ ion-content{
     background-size: cover;
 } 
 
+.confirmationImg{
+    position: relative;
+    display: flexbox;
+    top: 200px;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+}
+
 .whattApp{
     position: relative;
-    top: 500px;
+    top: 200px;
     text-align: center;
 }
 

@@ -23,7 +23,6 @@ const routes: Routes = [
   { path: 'adress', loadChildren: './pages/adress/adress.module#AdressPageModule' },
   { path: 'balance', loadChildren: './pages/balance/balance.module#BalancePageModule' },
   { path: 'list-fruits', loadChildren: './pages/list-fruits/list-fruits.module#ListFruitsPageModule' },
-  { path: 'order', loadChildren: './pages/order/order.module#OrderPageModule' },
   { path: 'list-vegetables', loadChildren: './pages/list-vegetables/list-vegetables.module#ListVegetablesPageModule' },
   { path: 'list-organics', loadChildren: './pages/list-organics/list-organics.module#ListOrganicsPageModule' },
   { path: 'list-rices', loadChildren: './pages/list-rices/list-rices.module#ListRicesPageModule' },

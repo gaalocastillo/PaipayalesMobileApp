@@ -1,3 +1,11 @@
+ion-toolbar{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#402208));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+
+
 ion-content{
     --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
     --background-size: cover;
@@ -7,6 +15,48 @@ ion-content{
     background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
     background-size: cover;
 } 
+
+
+.productItem {
+    fill: transparent;
+    background: transparent !important; 
+}
+
+item-native{
+    fill: transparent;
+    background: transparent !important; 
+}
+
+ion-item{
+    --background: var(--ion-item-background,var(--ion-background-color,transparent));
+}
+
+
+.imgItem{
+    height:53.06px ;
+    width: 89.9px ;
+}
+
+.priceItem{
+    font-family: "Century Gothic";
+    size: 15.73em;
+    color: #402208;
+}
+
+.nameItem{
+    font-family:"Century Gothic";
+    size:18em;
+    color: #402208;
+    font-weight: bold;
+}
+
+.productImage{
+    fill: transparent;
+    --background: transparent !important; 
+    color: transparent !important;
+    width: 50px;
+    height: 50px;
+}
 
 .labelOrder{
     background-color: #547E1A;
@@ -38,6 +88,12 @@ ion-content{
     color: #402208;
 }
 
+.labelPoints{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 18px;
+    color: #402208;
+}
 
 .labelTotal{
     font-family: 'Century Gothic';
