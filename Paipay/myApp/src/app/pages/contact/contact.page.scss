@@ -1,0 +1,90 @@
+ion-toolbar{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#402208));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+
+ion-content{
+    --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
+    --background-size: cover;
+}
+
+.bg-image {
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.logoBlock{
+    position: relative;
+    top: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoBlock{
+    position: relative;
+    top: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsAppBlockDiv{
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsAppBlock{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 0;
+}
+
+.whatsApp{
+    height:75px;
+    width: 75px;
+}
+
+.whatsAppLabel{
+    font-family: 'Century Gothic';
+    font-size: 27px;
+    font-weight: bold;
+    color: #00852A;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.twitterBlockDiv{
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitterBlock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitter{
+    height:75px;
+    width: 75px;
+}
+
+.twitterLabel{
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    font-weight: bold;
+    color: #00852A;
+    justify-content: center;
+    align-items: center;
+}

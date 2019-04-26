@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
+  <ion-toolbar >
+    <ion-buttons class="left" slot="start">
+      <ion-button>
+        <ion-icon name="arrow-round-back" [routerLink]="['/menu/products-menu']"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+      
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+      
+      <ion-button>
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+
+      <ion-menu-button></ion-menu-button>
+    
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
+  
 
-<ion-content padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+    
+  <!-- logo block -->
+  <div class="logoBlock">
+    <ion-img class="logo"  src="assets/logos/logo2.png" style="height:75px;width: 150px;"></ion-img>
+  </div>
+
+<div class="whatsAppBlockDiv">
+  <div class="whatsAppBlock">
+    <ion-img class="whatsApp"  src="assets/icon/iconWhatsApp.png" ></ion-img>
+    <label class="whatsAppLabel"> 0966123587 </label>
+  </div>
+</div>
+
+
+<div class="twitterBlockDiv">
+  <div class="twitterBlock">
+    <ion-img class="twitter"  src="assets/icon/iconTwitter.png" ></ion-img>`
+    <label class="twitterLabel"> https://twitter.com/paipay_stalucia </label>
+  </div>
+</div>
 
 </ion-content>

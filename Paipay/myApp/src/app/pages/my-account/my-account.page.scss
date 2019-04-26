@@ -1,3 +1,11 @@
+ion-toolbar{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#402208));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+
+
 ion-content{
     --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
     --background-size: cover;
@@ -139,6 +147,12 @@ ion-content{
     font-family: "Century Gothic";
     color: white;
     size: 12.43em;
+}
+
+.editBtn{
+    background-color: transparent;
+    margin: none;
+
 }
 
 .continue{
