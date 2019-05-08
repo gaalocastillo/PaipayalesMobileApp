@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Component({
   selector: 'app-adress',
   templateUrl: './adress.page.html',
@@ -10,19 +11,29 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdressPage implements OnInit {
 
-  public items  = []; 
+  public items = [];
+  public selected = "";
+  
   
 
   constructor(private http: HttpClient) {
 
-    this.http.get('http://192.168.0.106:9000/api/v1/userZones/').subscribe((response : any[]) => {
+    this.http.get('http://127.0.0.1:9000/api/v1/users/user-zones/').subscribe((response : any[]) => {
     console.log(response);
-    this.items = response;
+
+    response.forEach(element => {
+      element["selected"] = false;
+      this.items.push(element);
     });
 
-    //TODO: sort by name!
-  
+  });
+    
+    console.log(this.items);
+
    }
+
+
+
 
   ngOnInit() {
   }

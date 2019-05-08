@@ -1,4 +1,4 @@
-<ion-content fullscreen  class= "bg-image" scrollX="false"  padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false" scrollY="false"  padding>
     
   <div>
     <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
@@ -9,30 +9,42 @@
     <ion-img src="assets/logos/logo2.png"></ion-img>
   </div>
 
+  <!-- <div class="adressZones">
+  <mbsc-scrollview [options]="contentSettings" #contentView>
+      <mbsc-scrollview-item i>
+          <mbsc-listview [options]="listviewSettings">
+              <mbsc-listview-item *ngFor="let item of items" >
+                  {{item.name}}
+              </mbsc-listview-item>
+          </mbsc-listview>
+      </mbsc-scrollview-item>
+  </mbsc-scrollview>
+</div> -->
 
-  <div class="adressZones">
-    <label class="zoneSelection">SELECCIONA TU SECTOR</label>
-      <ion-virtual-scroll [items]="items">
-      <ion-item class="productItem" *virtualItem="let item">
-        {{ item.name }}
-      </ion-item>
-    </ion-virtual-scroll>
-  </div>
+<div class="adressZones" >
+    <ion-list class="list" padding  >
+        <ion-list-header>
+          <ion-label>SELECCIONA TU SECTOR</ion-label>
+        </ion-list-header>
+        <ion-item class="productItem" *ngFor="let item of items">
+            <label class="nameItem">{{item.name}}</label>
+        </ion-item>
+      </ion-list>
+</div>
+
+<!-- <div class="adressZones">
+    <ion-virtual-scroll [items]="items">
+        <ion-item-divider >
+          SELECCIONA TU SECTOR
+        </ion-item-divider>
+        <ion-item *virtualItem="let item">
+          {{ item.name }}
+        </ion-item>
+      </ion-virtual-scroll>
+</div> -->
 
 
 
-
-
-
-<!-- 
-  <div class="adressZones" >
-    <label class="zoneSelection">SELECCIONA TU SECTOR</label>
-        <ion-list class="list"  padding >
-            <ion-item class="productItem" *ngFor="let item of items">
-              <label class="nameItem">{{item.name}}</label>
-            </ion-item>
-          </ion-list>
-  </div> --> -->
 
 
   <!-- <div>

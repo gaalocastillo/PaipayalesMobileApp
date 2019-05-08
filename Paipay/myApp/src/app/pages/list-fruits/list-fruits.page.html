@@ -33,14 +33,15 @@
     <div>
       <ion-list style=" background: transparent !important; " padding >
         <ion-item class="productItem" *ngFor="let item of items">
-          <img class="imgItem" src="{{item.img}}">
+          <img class="imgItem" src="{{item.photo}}">
           <p style="text-align:center;">
-          <label class="priceItem">{{item.price}} </label>
+          <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
           <br>
           <label class="nameItem">{{item.name}}</label>
           </p>
-          <button clear (click)="incrementQty()"><ion-icon name="add-circle" ></ion-icon></button>{{qty}}
-          <button clear (click)="decrementQty()"><ion-icon name="remove-circle" ></ion-icon></button>
+          <button clear (click)="incrementQty(item.id)"><ion-icon name="add-circle" ></ion-icon></button>{{qty}}
+          <label> {{item.qty}}</label>
+          <button clear (click)="decrementQty(item.id)"><ion-icon name="remove-circle" ></ion-icon></button>
         </ion-item>
       </ion-list>
     </div>
@@ -51,8 +52,8 @@
           <img class="continueBuyingIcon" src="assets/buttons/continueBuying.png" alt="">
         </button>
 
-        <button class="endBuying-button">
-          <img class="endBuyingIcon" src="assets/buttons/endBuying.png" alt="">
+        <button class="endBuying-button" click>
+          <img class="endBuyingIcon" src="assets/buttons/endBuying.png" alt="" (click)="makePurchase()">
         </button>
       </div>
     </div>

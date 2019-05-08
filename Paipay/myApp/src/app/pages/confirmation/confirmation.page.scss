@@ -11,11 +11,18 @@ ion-content{
 .confirmationImg{
     position: relative;
     display: flexbox;
-    top: 200px;
+    top: 175px;
     height: 300px;
     width: 300px;
     text-align: center;
     align-content: center;
+}
+
+.familyLabel{
+    font-family: 'Winterbean' !important;
+    font-style: italic;
+    size: 35px;
+    color: #402208;
 }
 
 .whattApp{
