@@ -1,3 +1,10 @@
+ion-toolbar{
+    --color: var(--ion-toolbar-color,var(--ion-text-color,#402208));
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+
 ion-content{
     --background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed cover;;
     --background-size: cover;
@@ -66,6 +73,19 @@ ion-item{
     width: 75.8px;
     height: 54.92px;
 }
+
+.addBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    margin: none;
+}
+
+.removeBtn{
+    background-color: transparent !important;
+    fill: transparent;
+    margin: none;
+}
+
 
 .continue{
     position: relative;

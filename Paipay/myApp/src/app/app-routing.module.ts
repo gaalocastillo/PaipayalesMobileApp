@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: 'list-vegetables', loadChildren: './pages/list-vegetables/list-vegetables.module#ListVegetablesPageModule' },
   { path: 'list-organics', loadChildren: './pages/list-organics/list-organics.module#ListOrganicsPageModule' },
   { path: 'list-rices', loadChildren: './pages/list-rices/list-rices.module#ListRicesPageModule' },
-  { path: 'confirmation', loadChildren: './pages/confirmation/confirmation.module#ConfirmationPageModule' },
+  { path: 'confirmation', loadChildren: './pages/confirmation/confirmation.module#ConfirmationPageModule' }
 ];
 
 @NgModule({

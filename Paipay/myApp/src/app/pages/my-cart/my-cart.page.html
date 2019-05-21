@@ -21,16 +21,35 @@
       
     </ion-toolbar>
   </ion-header>
-<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false" scrollY="false">
 
-  <div class="labelOrder">
-    <label class="label">LISTA DE PEDIDO</label>
-  </div>
+    <!-- logo block -->
+    <div class="logoBlock" >
+      <ion-img class="logo"  src="assets/misc/orderLabel.png" ></ion-img>
+    </div>
+
+    <div>
+      <ion-grid class="grid-categories" style=" background: transparent !important; " padding >
+        <ion-row *ngFor="let item of items; let i = index" >
+          <ion-col>
+            <img class="imgItem" src="{{item.photo}}">
+          </ion-col>
+          <ion-col>
+            <label class="nameItem">{{item.name}}</label>
+          </ion-col>
+          <ion-col>
+            <label class="priceItem">{{item.price}} </label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+    </div>
+<!-- 
 
   <div>
       <ion-list style=" background: transparent !important; " padding >
         <ion-item class="productItem" *ngFor="let item of items">
-          <img class="imgItem" src="{{item.img}}">
+          <img class="imgItem" src="{{item.photo}}">
           <div>
             <label class="nameItem">{{item.name}}</label>
             <label class="priceItem">{{item.price}} </label>
@@ -38,29 +57,30 @@
   
         </ion-item>
       </ion-list>
-  </div>
+  </div> -->
 
-  <div class="total">
+  <div class="total" padding>
     <label class="labelSubtotal">
-      Sub Total: $ 4.0
+      Sub Total: $ {{subTotalPrice}}
     </label> <br>
     <label class="labelTransport">
-      Envio: $ 1.5
+      Envio: $ {{shippingFee}}
     </label> <br>
     <label class="labelPoints">
         Canjea tus puntos: $ 1.0 
       </label><br>
     <label class="labelTotal">
-      Total: $ 5.5
+      Total: $ {{totalPrice}}
     </label> 
   </div>
 
-  <div>
+  <!--- Quitar el padding de la izquierda y de la derecha-->
+  <div padding>
     <img src="assets/misc/3-02.png">
   </div>
   
     <div class="continue">
-      <button class="continue-button" [routerLink]="['/confirmation']" >
+      <button (click)=makePurchase() class="continue-button" [routerLink]="['/confirmation']" >
         <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
       </button>
     </div>

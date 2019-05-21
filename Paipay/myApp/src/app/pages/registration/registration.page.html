@@ -1,4 +1,6 @@
 <ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+
+  
   <div>
     <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
   </div>
@@ -13,6 +15,8 @@
     <ion-img class="registrationLogo" src="assets/misc/registration.png"></ion-img>
   </div>
 
+  <form #form="ngForm" (ngSubmit)="register(form)">
+
   <div class="addAvatar">
     <div class="avatarInfo">
       <ion-avatar class="avatar">
@@ -24,26 +28,27 @@
 
 
   <div class="name">
-    <ion-input class="nameInput" placeholder="Nombre y Apellido"></ion-input>
+    <ion-input class="nameInput" type ="text" placeholder="Nombre y Apellido" name="name" [(ngModel)]="data.name"></ion-input>
   </div>
 
   <div class="phone">
-    <ion-input class="phoneInput" placeholder="Teléfono"></ion-input>
+    <ion-input class="phoneInput" type ="text" placeholder="Teléfono" name="phone" [(ngModel)]="data.phone"></ion-input>
   </div>
 
   <div class="mail">
-    <ion-input class="mailInput" type="email" placeholder="Correo Electrónico"></ion-input>
+    <ion-input class="mailInput" type="email" placeholder="Correo Electrónico" name="email" [(ngModel)]="data.email"> </ion-input>
   </div>
 
   <div class="password">
-    <ion-input class="passwordInput" type="password" placeholder="Contraseña"></ion-input>
+    <ion-input class="passwordInput" type="password" placeholder="Contraseña" name="password" [(ngModel)]="data.password" ></ion-input>
   </div>
 
 
   <div class="continue">
-    <button class="continue-button" [routerLink]="['/adress']" >
-      <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
+    <button class="continue-button" click >
+      <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" (click)="register" ></ion-img>
     </button>
   </div>
 
+</form>
 </ion-content>

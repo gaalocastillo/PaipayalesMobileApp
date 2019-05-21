@@ -14,18 +14,12 @@ ion-content{
     background-size: cover;
 }
 
-.pointsLabel{
+
+.logoBlock{
     position: relative; 
     top:66px;
-    background-color: #547E1A;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    height: 34.26px;
 }
+
 
 .points{
     font-family: "Century Gothic";
@@ -34,6 +28,56 @@ ion-content{
     size:18em;
     color: white;
     
+}
+
+.infoPoints{
+    position: relative; 
+    top:76px;
+    background-color: white !important;
+    fill: white;
+}
+
+.accumulatedPoints{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 13em;
+    color: #547E1A;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline;
+
+}
+
+.expirationsPoints{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    size: 10em;
+    color: #547E1A;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline;
+}
+
+
+
+.progressBar{
+    color: #547E1A;
+    --progress-background:var(--ion-color-primary,#547E1A);
+}
+
+
+.pointsLabel{
+    background-color: transparent !important;
+    // fill: transparent;
+    font-family: 'Century Gothic';
+    size: 20em;
+    color: #402208;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline;
 }
 
 .weight{

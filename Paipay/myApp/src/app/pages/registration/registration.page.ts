@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from  "@angular/router";
+import { AuthService } from 'src/services/authetification/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationPage implements OnInit {
 
-  constructor() { }
+  data = {}
+
+  constructor(private authService: AuthService, private router: Router) {
+
+
+  }
 
   ngOnInit() {
   }
+
+  register(form){
+
+    console.log(form.value);
+
+    this.router.navigate(['/adress'],this.data);
+    // this.authService.register(form.value).subscribe((res) =>{
+    //   this.router.navigateByUrl('login');
+    // });
+  }
+
+
+
 
 }

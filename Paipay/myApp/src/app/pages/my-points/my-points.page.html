@@ -22,11 +22,38 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false" >
 
-  <div class="pointsLabel">
-    <label class="points">MIS PUNTOS</label>
+
+    <!-- image block -->
+    <div class="logoBlock">
+        <ion-img class="logo"  src="assets/misc/34-02.png" ></ion-img>
+    </div>
+
+  <div class="infoPoints">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="accumulatedPoints">
+          <label  >CONSUMOS A LA FECHA</label>
+        </ion-col>
+        <ion-col class="expirationsPoints">
+          <label >EXPIRA TUS PUNTOS</label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <div padding>
+      <ion-progress-bar class="progressBar" value="0.5"></ion-progress-bar>
+    </div>
   </div>
+  
+
+  <div padding>
+    <label class="pointsLabel">Tienes: </label>
+  </div>
+
+ 
+
 
   <!-- image block -->
   <div class="weight">

@@ -11,7 +11,7 @@
 
   <!-- <div class="adressZones">
   <mbsc-scrollview [options]="contentSettings" #contentView>
-      <mbsc-scrollview-item i>
+      <mbsc-scrollview-item >
           <mbsc-listview [options]="listviewSettings">
               <mbsc-listview-item *ngFor="let item of items" >
                   {{item.name}}
@@ -22,11 +22,11 @@
 </div> -->
 
 <div class="adressZones" >
-    <ion-list class="list" padding  >
+    <ion-list class="list" padding scrollY="true" >
         <ion-list-header>
           <ion-label>SELECCIONA TU SECTOR</ion-label>
         </ion-list-header>
-        <ion-item class="productItem" *ngFor="let item of items">
+        <ion-item [class.hightlight]="item.selected" class="productItem" *ngFor="let item of items" (click)="selectCP(item)">
             <label class="nameItem">{{item.name}}</label>
         </ion-item>
       </ion-list>
@@ -41,8 +41,8 @@
           {{ item.name }}
         </ion-item>
       </ion-virtual-scroll>
-</div> -->
-
+</div>
+ -->
 
 
 

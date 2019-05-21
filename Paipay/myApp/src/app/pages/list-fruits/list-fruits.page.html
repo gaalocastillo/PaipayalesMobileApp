@@ -2,7 +2,7 @@
     <ion-toolbar>
       <ion-buttons class="left" slot="start">
         <ion-button>
-          <ion-icon name="arrow-round-back" [routerLink]="['/menu/products-menu']"></ion-icon>
+          <ion-icon name="arrow-round-back" click="returnToMenu()" ></ion-icon>
         </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
@@ -14,14 +14,13 @@
       </ion-button>
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
 
 
 
   
-<ion-content fullscreen  class= "bg-image" scrollX="false" padding>
+<ion-content fullscreen  class= "bg-image" scrollX="false"   >
 
     <!-- logo block -->
     <div class="logoBlock">
@@ -29,8 +28,32 @@
     </div>
 
 
+  <div>
+    <ion-grid class="grid-products" style=" background: transparent !important; " padding >
+      <ion-row *ngFor="let item of items; let i = index" >
+        <ion-col>
+          <img class="imgItem" src="{{item.photo}}">
+        </ion-col>
 
-    <div>
+        <ion-col>
+          <p style="text-align:center;">
+            <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
+          <br>
+            <label class="nameItem">{{item.name}}</label>
+          </p>
+        </ion-col>
+            
+        <ion-col style="width:100px;">
+          <button class="addBtn" clear (click)="incrementQty(item.id)"><ion-icon src="assets/misc/add.svg" size="large"></ion-icon></button>{{qty}}
+          <label> {{item.qty}}</label>
+          <button class="removeBtn"  clear (click)="decrementQty(item.id)"><ion-icon src="assets/misc/remove.svg" size="large"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>    
+  </div>
+
+
+    <!-- <div >
       <ion-list style=" background: transparent !important; " padding >
         <ion-item class="productItem" *ngFor="let item of items">
           <img class="imgItem" src="{{item.photo}}">
@@ -39,12 +62,12 @@
           <br>
           <label class="nameItem">{{item.name}}</label>
           </p>
-          <button clear (click)="incrementQty(item.id)"><ion-icon name="add-circle" ></ion-icon></button>{{qty}}
+          <button class="addBtn" clear (click)="incrementQty(item.id)"><ion-icon src="assets/misc/add.svg" size="large"></ion-icon></button>{{qty}}
           <label> {{item.qty}}</label>
-          <button clear (click)="decrementQty(item.id)"><ion-icon name="remove-circle" ></ion-icon></button>
+          <button class="removeBtn"  clear (click)="decrementQty(item.id)"><ion-icon src="assets/misc/remove.svg" size="large"></ion-icon></button>
         </ion-item>
       </ion-list>
-    </div>
+    </div> -->
 
     <div style="background-color: transparent !important;">
       <div class="continue" >

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import{ HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { NavController, NavParams} from '@ionic/angular';
 import { isNgTemplate } from '@angular/compiler';
+import { PurchaseServiceService } from "src/services/purchase/purchase-service.service";
 
 @Component({
   selector: 'app-list-fruits',
@@ -12,8 +14,9 @@ export class ListFruitsPage implements OnInit {
 
   private items  = []; 
   
+  
 
-  constructor(private http:HttpClient ) { 
+  constructor(private http:HttpClient, private router: Router, private purchase: PurchaseServiceService ) { 
     
     this.http.get('http://127.0.0.1:9000/api/v1/products/Frutas').subscribe((response : any[]) => {
     
@@ -58,26 +61,31 @@ export class ListFruitsPage implements OnInit {
     console.log(this.items);
   }
 
+
+  BackButtonAction(){
+    
+  }
+
+  returnToMenu(){
+    //[routerLink]="['/menu/products-menu']"
+
+    this.router.navigate(['/menu/products-menu']);
+  }
+
   makePurchase(){
 
-    var temporal = {"products":JSON.stringify(this.items), "totalPrice":0.50};
- 
+    var selectedItems = [];
 
-    var header = {
-      headers: new HttpHeaders().set('Authorization','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiOSIsImV4cCI6MTU1NzMyNjU2OSwidXNlcm5hbWUiOiJkZWxpdmVyeTRAaG90bWFpbC5jb20iLCJlbWFpbCI6ImRlbGl2ZXJ5NEBob3RtYWlsLmNvbSJ9.XmaWrwYVA1ThyG22dQdyWYa9QFnLXZipW-fi1mebrFQ' )
-    }
-
-    console.log(temporal);
-    console.log(header);
-
-
-    this.http.post("http://127.0.0.1:9000/api/v1/purchases/make-purchase/",temporal, header)
-    .subscribe(data => {
-      console.log(data);
-     }, error => {
-      console.log(error);
-  
+    this.items.forEach(element => {
+      if(element.qty!==0){
+        selectedItems.push(element);
+      }
     });
+
+    this.purchase.storage = selectedItems;
+
+    this.router.navigate(['my-cart'], this.purchase.storage);
+
   }
 
 
