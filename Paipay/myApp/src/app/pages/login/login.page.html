@@ -18,37 +18,46 @@
     </button>
   </div>
 
-  <!-- inputs block -->
-  <div class="email">
-    <div style="width: 305.98px;">
-      <ion-input class="email-input" type="email" placeholder="Correo electrónico" ></ion-input>
+  <!-- inputs block and formular -->
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+  
+    <div class="email">
+      <div style="width: 305.98px;">
+        <ion-input  ngModel class="email-input" name="email" type="email" placeholder="Correo electrónico" ></ion-input>
+      </div>
     </div>
-  </div>
 
-  <div class="password">
-    <div style="width: 305.98px;">
-      <ion-input class="password-label" type="password" placeholder="Contraseña" ></ion-input> 
+    <div class="password">
+      <div style="width: 305.98px;">
+        <ion-input  ngModel class="password-label" name="password" type="password" placeholder="Contraseña" ></ion-input> 
+      </div>
     </div>
-  </div>
 
-   <!-- buttons block -->
-  <div class="forgottenpass">
-    <ion-label class="forgotten-password" [routerLink]="['/forgottenpass']" floating> ¿Has olvidado tu contraseña?</ion-label>
-  </div>
-
-  <div class="rLabel">
-    <div style="display: inline-flex;">
-      <ion-checkbox checked="true" class="checked"></ion-checkbox>
-      <ion-label class="rememberMe" >Recuérdame</ion-label>
+    <!-- buttons block -->
+    <div class="forgottenpass">
+      <ion-label class="forgotten-password" [routerLink]="['/forgottenpass']" floating> ¿Has olvidado tu contraseña?</ion-label>
     </div>
-  </div>
 
-  <div class="continue">
+    <div class="rLabel">
+      <div style="display: inline-flex;">
+        <ion-checkbox checked="true" class="checked"></ion-checkbox>
+        <ion-label class="rememberMe" >Recuérdame</ion-label>
+      </div>
+    </div>
+
+    <div class="continue">
+      <button type="submit" class="continue-button" >
+        <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
+      </button>
+    </div>
+
+  <!-- <div class="continue">
     <button class="continue-button" [routerLink]="['/menu/products-menu']" >
       <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
     </button>
-  </div>
+  </div> -->
 
+  </form>
 
   <div class="guest">
     <ion-label class="guestL" [routerLink]="['/menu/products-menu']" floating> Continuar como invitado</ion-label>

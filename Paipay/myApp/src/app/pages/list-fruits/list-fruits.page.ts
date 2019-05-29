@@ -3,8 +3,8 @@ import{ HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NavController, NavParams} from '@ionic/angular';
 import { isNgTemplate } from '@angular/compiler';
-import { PurchaseServiceService } from "src/services/purchase/purchase-service.service";
-
+import {EnvService} from 'src/app/services/env.service';
+import {PurchaseService} from 'src/app/services/purchase.service';
 @Component({
   selector: 'app-list-fruits',
   templateUrl: './list-fruits.page.html',
@@ -16,9 +16,9 @@ export class ListFruitsPage implements OnInit {
   
   
 
-  constructor(private http:HttpClient, private router: Router, private purchase: PurchaseServiceService ) { 
+  constructor(private http:HttpClient, private router: Router,private purchase: PurchaseService, private env: EnvService) { 
     
-    this.http.get('http://127.0.0.1:9000/api/v1/products/Frutas').subscribe((response : any[]) => {
+    this.http.get(env.API_URL +'/api/v1/products/Frutas').subscribe((response : any[]) => {
     
 
     response.forEach(element => {

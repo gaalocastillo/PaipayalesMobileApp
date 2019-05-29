@@ -142,6 +142,25 @@ ion-content{
     size: 12.43em;
 }
 
+.adress{
+    position: relative;
+    top: 192.89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adressInput {
+    background-color: #3B2508!important;
+    opacity: 100% !important;
+    width: 315.98px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Century Gothic";
+    color: white;
+    size: 12.43em;
+}
+
 .continue{
     position: relative;
     top: 220.21px;

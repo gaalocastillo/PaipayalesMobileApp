@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/services/authetification/auth.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ModalController, NavController } from '@ionic/angular';
+import { RegistrationPage } from '../registration/registration.page';
+import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { AlertService } from 'src/app/services/alert.service';
+import { PurchaseService } from 'src/app/services/purchase.service';
 
 @Component({
   selector: 'app-login',
@@ -9,27 +13,53 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  private username: string;
+  private email: string;
   private password: string;
+  
 
-  constructor(private activateRoute: ActivatedRoute, private authService: AuthService, public router:Router) {
-
-
-   }
+  constructor(
+    private modalController: ModalController,
+    private authService: AuthService,
+    private navCtrl: NavController,
+    private alertService: AlertService, 
+    private storage: PurchaseService,
+  ) { }
 
   ngOnInit() {
   }
 
-
-  login(){
-    this.authService.login(this.username, this.password);
-    this.username = null;
-    this.password = null;
-    this.goHome();
+  // Dismiss Login Modal
+  dismissLogin() {
+    this.modalController.dismiss();
   }
 
-  goHome(){
-    this.router.navigate(['/menu/products-menu']);
+  // On Register button tap, dismiss login modal and open register modal
+  async registerModal() {
+    this.dismissLogin();
+    const registerModal = await this.modalController.create({
+      component: RegistrationPage
+    });
+    return await registerModal.present();
   }
 
+  login(form: NgForm) {
+    this.authService.login(form.value.email, form.value.password).subscribe(
+      data => {
+        console.log(data);
+        console.log("Logged");
+        this.storage.token = data["access-token"]
+        this.alertService.presentToast("Logged In");
+        console.log(this.storage.token);
+      },
+      error => {
+        console.log(error);
+        this.alertService.presentToast("Usuario o contraseña incorrecta");
+      },
+      () => {
+        this.dismissLogin();
+        console.log(this.storage.storage);
+        this.navCtrl.navigateRoot('/menu/products-menu');
+      }
+    );
+  }
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import{ HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import {PurchaseServiceService} from 'src/services/purchase/purchase-service.service';
+import {PurchaseService} from 'src/app/services/purchase.service';
 import { isEmpty } from 'rxjs/operators';
+import {EnvService} from 'src/app/services/env.service';
 
 @Component({
   selector: 'app-my-cart',
@@ -16,9 +17,10 @@ export class MyCartPage implements OnInit {
   private subTotalPrice = 0;
   private totalPrice =0;
 
-  constructor(private http:HttpClient, private router: Router, private purchase: PurchaseServiceService) { 
+  constructor(private http:HttpClient, private router: Router, private purchase: PurchaseService, private env: EnvService) { 
 
     this.items = this.purchase.storage;
+  
 
     if(!(this.items.length === 0) || !(this.purchase.storage.length==0)){
       
@@ -50,14 +52,19 @@ export class MyCartPage implements OnInit {
  
 
     var header = {
-      headers: new HttpHeaders().set('Authorization','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiOSIsImV4cCI6MTU1NzMyNjU2OSwidXNlcm5hbWUiOiJkZWxpdmVyeTRAaG90bWFpbC5jb20iLCJlbWFpbCI6ImRlbGl2ZXJ5NEBob3RtYWlsLmNvbSJ9.XmaWrwYVA1ThyG22dQdyWYa9QFnLXZipW-fi1mebrFQ' )
+      headers: new HttpHeaders().set('Authorization',this.purchase.token)
     }
+
+    // var header = {
+    //   headers: new HttpHeaders().set('Authorization','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTkiLCJlbWFpbCI6ImNsaWVudDFAaG90bWFpbC5jb20iLCJ1c2VybmFtZSI6ImNsaWVudDFAaG90bWFpbC5jb20iLCJleHAiOjE1NTg5Nzg5ODh9.fPdBmDFQNJKomk8mp91iNaQRIv9f6U3qjfT5ArS8HcY' )
+    // }
+
 
     console.log(temporal);
     console.log(header);
 
 
-    this.http.post("http://127.0.0.1:9000/api/v1/purchases/make-purchase/",temporal, header)
+    this.http.post(this.env.API_URL +"/api/v1/purchases/make-purchase/",temporal, header)
     .subscribe(data => {
       console.log(data);
      }, error => {
