@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { NavController, NavParams} from '@ionic/angular';
 import { isNgTemplate } from '@angular/compiler';
 import {EnvService} from 'src/app/services/env.service';
-import {PurchaseService} from 'src/app/services/purchase.service';
+import {StorageService} from 'src/app/services/storage.service';
 @Component({
   selector: 'app-list-fruits',
   templateUrl: './list-fruits.page.html',
@@ -14,12 +14,10 @@ export class ListFruitsPage implements OnInit {
 
   private items  = []; 
   
-  
 
-  constructor(private http:HttpClient, private router: Router,private purchase: PurchaseService, private env: EnvService) { 
+  constructor(private http:HttpClient, private router: Router,private purchase: StorageService, private env: EnvService) { 
     
     this.http.get(env.API_URL +'/api/v1/products/Frutas').subscribe((response : any[]) => {
-    
 
     response.forEach(element => {
       element["qty"] = 0;
@@ -68,7 +66,6 @@ export class ListFruitsPage implements OnInit {
 
   returnToMenu(){
     //[routerLink]="['/menu/products-menu']"
-
     this.router.navigate(['/menu/products-menu']);
   }
 

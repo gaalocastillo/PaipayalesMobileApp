@@ -15,7 +15,7 @@
     <ion-img class="registrationLogo" src="assets/misc/registration.png"></ion-img>
   </div>
 
-  <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+  <form #form="ngForm"  (ngSubmit)="register(form)" method="post">
 
     <div class="addAvatar">
       <div class="avatarInfo">
@@ -28,7 +28,7 @@
 
 
     <div class="name">
-      <ion-input ngModel class="nameInput" name="Cname" type ="text" placeholder="Nombre y Apellido"  ></ion-input>
+      <ion-input ngModel class="nameInput" name="name" type ="text" placeholder="Nombre y Apellido"  ></ion-input>
     </div>
 
     <div class="phone">
@@ -44,9 +44,12 @@
     </div>
 
     <div class="adress">
-      <ion-input ngModel class="adressInput" name="adress"  type="text" placeholder="Contraseña" ></ion-input>
+      <ion-input ngModel class="adressInput" name="adress"  type="text" placeholder="Dirección" ></ion-input>
     </div>
 
+    
+
+    
 
     <div class="continue">
       <button type="submit"  class="continue-button"  >

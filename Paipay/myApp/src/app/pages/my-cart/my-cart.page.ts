@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import {PurchaseService} from 'src/app/services/purchase.service';
+import {StorageService} from 'src/app/services/storage.service';
 import { isEmpty } from 'rxjs/operators';
 import {EnvService} from 'src/app/services/env.service';
 
@@ -17,10 +17,9 @@ export class MyCartPage implements OnInit {
   private subTotalPrice = 0;
   private totalPrice =0;
 
-  constructor(private http:HttpClient, private router: Router, private purchase: PurchaseService, private env: EnvService) { 
+  constructor(private http:HttpClient, private router: Router, private purchase: StorageService, private env: EnvService) { 
 
     this.items = this.purchase.storage;
-  
 
     if(!(this.items.length === 0) || !(this.purchase.storage.length==0)){
       

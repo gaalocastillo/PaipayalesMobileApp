@@ -36,9 +36,9 @@ export class AuthService {
       }),
     );
   }
-  register(fName: String, lName: String, email: String, password: String) {
+  register(name: String, email: String, password: String, phoneNumber: String, userZone: String, address: String, photo: String , role: any ) {
     return this.http.post(this.env.API_URL + '/api/v1/auth/register/',
-      {fName: fName, lName: lName, email: email, password: password}
+      { name: name,  email: email, password: password, phoneNumber: phoneNumber, userZone :userZone, address: address, photo:photo, role: role}
     )
   }
 
