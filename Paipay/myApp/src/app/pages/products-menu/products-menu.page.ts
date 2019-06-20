@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import {StorageService} from 'src/app/services/storage.service';
-import { isEmpty } from 'rxjs/operators';
+import { StorageService } from 'src/app/services/storage.service';
 import {EnvService} from 'src/app/services/env.service';
 
 
@@ -13,13 +12,19 @@ import {EnvService} from 'src/app/services/env.service';
 })
 export class ProductsMenuPage implements OnInit {
 
-  
+  private categories = [];
 
-  constructor(private http:HttpClient, private router: Router, private categories: StorageService, private env: EnvService) { 
+  constructor(private http:HttpClient, private router: Router, private categoriesStorage: StorageService, private env: EnvService) { 
 
-    this.http.get(env.API_URL +'/api/v1/categories/').subscribe(response => {
+    this.http.get(env.API_URL +'/api/v1/categories/').subscribe((response:any[]) => {
 
-      this.categories.categories = response;
+      response.forEach(element => {
+        console.log(element);
+        element["name"] = element["name"].toUpperCase();
+        this.categories.push(element);
+      });
+
+      console.log(this.categories)
   
     }); 
 

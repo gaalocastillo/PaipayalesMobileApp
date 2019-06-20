@@ -15,16 +15,14 @@ ion-content{
     background-size: cover;
 } 
 
-.options{
+.gridCategory{
     position: relative;
-    top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: block;
+    top: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.fruits{
+.rowCategory{
     position: relative;
     top: 40px;
     display: flex;
@@ -32,14 +30,16 @@ ion-content{
     align-items: center;
 }
 
-.buttonFruits{
+.buttonCategory{
     background: transparent !important; 
-    height: 88px; 
-    width: 68px;
     display: block;
+    margin-bottom: 10px;
+    height: 88px; 
+    width: 80px;
+    
 }
 
-.fruitsLabel{
+.categoryLabel{
     font-family: "Century Gothic";
     font-weight: bold;
     text-align: center;
@@ -48,89 +48,3 @@ ion-content{
     margin-left: auto;
     margin-right: auto;
 }
-
-.vegetables{
-    position: relative;
-    top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonVegetables{
-    background: transparent !important; 
-    height: 88px; 
-    width: 68px;
-    display: block;
-}
-
-.vegetablesLabel{
-    font-family: "Century Gothic";
-    font-weight: bold;
-    text-align: center;
-    size:14.68em;
-    color: #402208;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.organics{
-    position: relative;
-    top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonOrganics{
-    background: transparent !important; 
-    height: 88px; 
-    width: 68px;
-    display: block;
-}
-
-.organicsLabel{
-    font-family: "Century Gothic";
-    font-weight: bold;
-    text-align: center;
-    size:14.68em;
-    color: #402208;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.rices{
-    position: relative;
-    top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonRices{
-    background: transparent !important; 
-    height: 88px; 
-    width: 68px;
-    display: block;
-}
-
-.ricesLabel{
-    font-family: "Century Gothic";
-    font-weight: bold;
-    text-align: center;
-    size:14.68em;
-    color: #402208;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-// .buttonFruits .buttonVegetables .buttonOrganics .buttonRices{
-//     background: transparent !important;
-//     height: 88px;
-//     width: 68px;
-// }
-

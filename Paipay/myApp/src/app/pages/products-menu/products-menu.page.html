@@ -23,49 +23,16 @@
 <ion-content fullscreen  class= "bg-image" scrollX="false" padding>
     
  
-<div class="options" scrollY="true">
-
-
-  <!-- <div class="categoryList">
-    <button class="buttonFruits" *ngFor="let item of items; let i = index"  [routerLink]="['/fruits']">
-        <img src="assets/icon/iconFruits.png" >
-        <label class="fruitsLabel">{{}}</label>
+<ion-grid class="gridCategory" scrollY="true">
+  <ion-row class="rowCategory" *ngFor="let category of categories; let i = index">
+    <button class="buttonCategory" [routerLink]="['/list-fruits']">
+      <img src="{{category.categoryImg}}" >
+      <label class="categoryLabel">{{category.name}}</label>
     </button>
-  </div> -->
+  </ion-row>
+</ion-grid>
 
 
-  <div class="fruits">
-    <button class="buttonFruits" [routerLink]="['/fruits']">
-      <img src="assets/icon/iconFruits.png" >
-      <label class="fruitsLabel">Frutas</label>
-    </button>
-  </div>
-
-  <div class="vegetables">
-    <button class="buttonVegetables" [routerLink]="['/vegetables']">
-      <img src="assets/icon/iconVegetables.png">
-      <label class="vegetablesLabel">Verduras</label>
-    </button>
-  </div>
-
-  <div class="organics">
-    <button class="buttonOrganics" [routerLink]="['/organics']">
-      <img src="assets/icon/iconOrganics.png">
-      <label class="organicsLabel">Orgánico</label>
-    </button>
-  </div>
-
-  <div class="rices">
-    <button class="buttonRices" [routerLink]="['/rices']">
-      <img src="assets/icon/iconRices.png">
-      <label class="ricesLabel">Arroz</label>
-    
-    </button>
-  </div>
-
-
-
-  </div>
-
+  
  
 </ion-content>
