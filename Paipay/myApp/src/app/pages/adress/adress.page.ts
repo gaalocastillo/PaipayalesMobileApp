@@ -8,6 +8,10 @@ import { NgForm } from '@angular/forms';
 import { AlertService } from 'src/app/services/alert.service';
 import { Router } from '@angular/router';
 import {StorageService} from 'src/app/services/storage.service';
+import { EnvService } from 'src/app/services/env.service';
+import { mobiscroll } from '@mobiscroll/angular-lite';
+//import { mobiscroll, MbscListviewOptions } from '@mobiscroll/angular-lite';
+
 
 
 @Component({
@@ -18,7 +22,8 @@ import {StorageService} from 'src/app/services/storage.service';
 export class AdressPage implements OnInit {
 
   public items = [];
-  public selected = "";  
+  
+  
   
   
   constructor(private http: HttpClient,
@@ -26,12 +31,13 @@ export class AdressPage implements OnInit {
     private authService: AuthService,
     private alertService: AlertService, 
     private router: Router,
-    private registration: StorageService
+    private registration: StorageService, 
+    private env: EnvService
     
     ) {
 
 
-    this.http.get('http://127.0.0.1:9000/api/v1/users/user-zones/').subscribe((response : any[]) => {
+    this.http.get(this.env.API_URL + '/api/v1/users/user-zones/').subscribe((response : any[]) => {
     console.log(response);
 
     response.forEach(element => {
@@ -64,16 +70,22 @@ export class AdressPage implements OnInit {
     return await loginModal.present();
     }
 
-  selectCP(item){
-    this.items[item] != this.items[item];
-    this.selected = this.items[item];
-  }
+  // selectCP(item){
+  //   this.items[item] != this.items[item];
+  //   this.selected = this.items[item];
+  // }
 
+
+//   this.items[item] = false;
+
+//   selectCP(item){
+//     this.items[item] != this.items[item];
+// }
 
 
   register() {
 
-    this.authService.register(this.registration.registrationForm.value.name, this.registration.registrationForm.value.email, this.registration.registrationForm.value.password, this.registration.registrationForm.value.phone,"Villa Club", this.registration.registrationForm.value.adress, '', 1 ).subscribe(
+    this.authService.register(this.registration.registrationForm.value.name, this.registration.registrationForm.value.email, this.registration.registrationForm.value.password, this.registration.registrationForm.value.phone,"Este", this.registration.registrationForm.value.adress, '', 1 ).subscribe(
       data => {
         this.authService.login(this.registration.registrationForm.value.email, this.registration.registrationForm.value.password).subscribe(
           data => {

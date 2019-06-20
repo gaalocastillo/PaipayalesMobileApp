@@ -1,65 +1,43 @@
-<ion-content fullscreen  class= "bg-image" scrollX="false" scrollY="false"  padding>
-    
+<ion-content fullscreen  class= "bg-image" scrollX="false" scrollY="true"  padding>
+  
   <div>
     <img class="return" src="assets/buttons/returnBtn.png" [routerLink]="['/login']">
   </div>
-    
-  <!-- logo block -->
+
   <div class="logo1">
-    <ion-img src="assets/logos/logo2.png"></ion-img>
+    <ion-img class="logoImage" src="assets/logos/logo2.png"></ion-img>
+  </div>
+
+  <div class="adressZones">
+    <ion-grid class="gridAdress">
+      <ion-row class="rowLabel">
+        <ion-label class="zoneSelection">SELECCIONA TU SECTOR</ion-label>
+      </ion-row> 
+      <ion-row class="rowList">
+        <ion-list class="list" >
+          <button ion-item [class.highlight]="route.selected"  *ngFor="let item of items; let i = index" (click)="selectCP(item)"> {{item.name}} </button>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
   </div>
 
   <!-- <div class="adressZones">
-  <mbsc-scrollview [options]="contentSettings" #contentView>
-      <mbsc-scrollview-item >
-          <mbsc-listview [options]="listviewSettings">
-              <mbsc-listview-item *ngFor="let item of items" >
-                  {{item.name}}
-              </mbsc-listview-item>
-          </mbsc-listview>
-      </mbsc-scrollview-item>
-  </mbsc-scrollview>
-</div> -->
+      <ion-grid class="gridAdress">
+        <ion-row class="rowLabel">
+          <ion-label class="zoneSelection">SELECCIONA TU SECTOR</ion-label>
+        </ion-row> 
+        <ion-row class="rowList">
+          <ion-list class="list" >
+            <ion-item  *ngFor="let item of items; let i = index"> {{item.name}}</ion-item>
+          </ion-list>
+        </ion-row>
+      </ion-grid>
+    </div> -->
 
-<div class="adressZones" >
-    <ion-list class="list" padding scrollY="true" >
-        <ion-list-header>
-          <ion-label>SELECCIONA TU SECTOR</ion-label>
-        </ion-list-header>
-        <ion-item [class.hightlight]="item.selected" class="productItem" *ngFor="let item of items" (click)="selectCP(item)">
-            <label class="nameItem">{{item.name}}</label>
-        </ion-item>
-      </ion-list>
-</div>
-
-<!-- <div class="adressZones">
-    <ion-virtual-scroll [items]="items">
-        <ion-item-divider >
-          SELECCIONA TU SECTOR
-        </ion-item-divider>
-        <ion-item *virtualItem="let item">
-          {{ item.name }}
-        </ion-item>
-      </ion-virtual-scroll>
-</div>
- -->
-
-
-
-
-  <!-- <div>
-    <ion-virtual-scroll [items]="items">
-      <ion-item *virtualItem="let item">
-        {{ item.name }}
-      </ion-item>
-    </ion-virtual-scroll>
-  </div> -->
-
-
-
-  <div class="continueBtn">
-    <button (click)="register()" style=" background-color: transparent !important;"  >
-      <img src="assets/buttons/continueLogin.png" alt="" style="height:39px;width:163.47px;">
+   
+  <div class="continueBtnDiv">
+    <button class="continueBtn" (click)="register()"  >
+      <img src="assets/buttons/continueLogin.png" alt="" >
     </button>
   </div>
 

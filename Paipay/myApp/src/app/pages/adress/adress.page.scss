@@ -16,45 +16,61 @@ ion-content{
 .return{
     position: relative;
     top: 10px ;
-    // left:19px;
     height: 16px;
     width: 13px;
 }
 
 .logo1{
-    text-align: center;
-    display: inline-block;
-    position: absolute;
+    position: relative;
     top: 66px;
-    left: 113px;
+}
+
+.logoImage{
+    margin-left: auto;
+    margin-right: auto;
     height: 80px;
     width: 150px;
 }
 
-// .scrollable{
-//     height: 200px;
-// }
-
 .highlight {
     background-color: #FFFF33 !important;
- }
+}
 
 .adressZones{
     position: relative;
-    top:140px;
+    top:150px;
     display: block;
-    background-color: #402208;
+    background-color: transparent !important;
     height: 10em;
-    
+    padding: none; 
+}
+
+.gridAdress{
+    align-items: center;
+    padding: none;
+    width: 20em;
+}
+
+.rowLabel{
+    background-color: #402208;
+    height: 1.5em;
+    width: 300px;
+}
+
+.rowList{
+    background-color:transparent !important;
+    height: 1.5em;
+    width: 300px;
 }
 
 .zoneSelection{
-    font-family: 'Century Gothic';
-    size: 18em;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
+    position: relative;
     text-align: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: white;
+    size: 18em;
     height: 150px;
 }
 
@@ -62,20 +78,17 @@ ion-content{
     text-align: center;
     position: relative;
     display: flexbox;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #402208;
-    --opacity: 0.5 !important;
+    --background: var(--ion-item-background,var(--ion-background-color,#402208));
+    opacity: 0.5 !important;
     padding-right: inherit;
     padding-left: inherit;
-
-    // overflow:hidden; 
-    // overflow-y:scroll;
-    // -webkit-overflow-scrolling: touch;
+    width: 300px;
+    height: 200px;
+    overflow:hidden; 
+    overflow-y:scroll;
 }
 
 .productItem{
-    --background: var(--ion-item-background,var(--ion-background-color,#402208));
     font-family: 'Century Gothic';
     font-weight: bold;
     size: 13.56px;
@@ -83,10 +96,19 @@ ion-content{
 
 }
 
+.continueBtnDiv{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 300px;
+    height:39px;
+    width:163.47px;
+}
+
 .continueBtn{
-    display: flexbox;
-    position: absolute;
-    top: 575px;
-    left:98px;
-    
+    background-color: transparent !important;
+    margin-left: auto;
+    margin-right: auto;
+    height:39px;
+    width:163.47px;
 }

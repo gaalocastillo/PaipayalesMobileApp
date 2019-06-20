@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import {StorageService} from 'src/app/services/storage.service';
 
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.page.html',
@@ -22,7 +23,7 @@ export class RegistrationPage implements OnInit {
     // private navCtrl: NavController,
     private alertService: AlertService, 
     private router: Router, 
-    private registration: StorageService,
+    private registration: StorageService
   ) { }
   
   ngOnInit() {
