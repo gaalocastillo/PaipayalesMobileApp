@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import {StorageService} from 'src/app/services/storage.service';
 import { EnvService } from 'src/app/services/env.service';
 import { mobiscroll } from '@mobiscroll/angular-lite';
+import { element } from '@angular/core/src/render3';
 //import { mobiscroll, MbscListviewOptions } from '@mobiscroll/angular-lite';
 
 
@@ -22,6 +23,7 @@ import { mobiscroll } from '@mobiscroll/angular-lite';
 export class AdressPage implements OnInit {
 
   public items = [];
+  selected: "";
   
   
   
@@ -41,11 +43,8 @@ export class AdressPage implements OnInit {
     console.log(response);
 
     response.forEach(element => {
-      element["selected"] = false;
       this.items.push(element);
     });
-
-
 
   });
     
@@ -70,22 +69,23 @@ export class AdressPage implements OnInit {
     return await loginModal.present();
     }
 
-  // selectCP(item){
-  //   this.items[item] != this.items[item];
-  //   this.selected = this.items[item];
-  // }
+  select(item){
+
+    this.items.forEach(element => {
+      if(element["name"] === item.name){
+        this.selected = item.name;
+      }
+    });
+  
+    console.log(this.selected);
+  }
 
 
-//   this.items[item] = false;
-
-//   selectCP(item){
-//     this.items[item] != this.items[item];
-// }
 
 
   register() {
 
-    this.authService.register(this.registration.registrationForm.value.name, this.registration.registrationForm.value.email, this.registration.registrationForm.value.password, this.registration.registrationForm.value.phone,"Este", this.registration.registrationForm.value.adress, '', 1 ).subscribe(
+    this.authService.register(this.registration.registrationForm.value.name, this.registration.registrationForm.value.email, this.registration.registrationForm.value.password, this.registration.registrationForm.value.phone,this.selected, this.registration.registrationForm.value.adress, '', 1 ).subscribe(
       data => {
         this.authService.login(this.registration.registrationForm.value.email, this.registration.registrationForm.value.password).subscribe(
           data => {

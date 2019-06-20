@@ -15,25 +15,11 @@
       </ion-row> 
       <ion-row class="rowList">
         <ion-list class="list" >
-          <button ion-item [class.highlight]="route.selected"  *ngFor="let item of items; let i = index" (click)="selectCP(item)"> {{item.name}} </button>
+          <ion-item [class.highlight]="item.name" (click)="select(item)"   *ngFor="let item of items; let i = index" > {{item.name}} </ion-item>
         </ion-list>
       </ion-row>
     </ion-grid>
   </div>
-
-  <!-- <div class="adressZones">
-      <ion-grid class="gridAdress">
-        <ion-row class="rowLabel">
-          <ion-label class="zoneSelection">SELECCIONA TU SECTOR</ion-label>
-        </ion-row> 
-        <ion-row class="rowList">
-          <ion-list class="list" >
-            <ion-item  *ngFor="let item of items; let i = index"> {{item.name}}</ion-item>
-          </ion-list>
-        </ion-row>
-      </ion-grid>
-    </div> -->
-
    
   <div class="continueBtnDiv">
     <button class="continueBtn" (click)="register()"  >
