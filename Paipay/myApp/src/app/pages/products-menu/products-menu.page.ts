@@ -35,5 +35,10 @@ export class ProductsMenuPage implements OnInit {
   ngOnInit() {
   }
   
+  selectCategory(category){
+    this.categoriesStorage.selectedCategory = category;
+    console.log(this.categoriesStorage.selectedCategory);
+    this.router.navigate(['product'], this.categoriesStorage.selectedCategory);
+  }
 
 }

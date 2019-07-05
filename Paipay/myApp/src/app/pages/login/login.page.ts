@@ -45,9 +45,13 @@ export class LoginPage implements OnInit {
   login(form: NgForm) {
     this.authService.login(form.value.email, form.value.password).subscribe(
       data => {
+        
+        var jsonUser = {name:data["name"], email:data["email"], }
+
         console.log(data);
         console.log("Logged");
         this.storage.token = data["access-token"]
+        this.storage.set_user(jsonUser)
         this.alertService.presentToast("Logged In");
         console.log(this.storage.token);
       },

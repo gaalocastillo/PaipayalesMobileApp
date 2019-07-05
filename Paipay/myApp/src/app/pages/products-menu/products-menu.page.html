@@ -25,7 +25,7 @@
  
 <ion-grid class="gridCategory" scrollY="true">
   <ion-row class="rowCategory" *ngFor="let category of categories; let i = index">
-    <button class="buttonCategory" [routerLink]="['/list-fruits']">
+    <button class="buttonCategory" (click)="selectCategory(category)">
       <img src="{{category.categoryImg}}" >
       <label class="categoryLabel">{{category.name}}</label>
     </button>

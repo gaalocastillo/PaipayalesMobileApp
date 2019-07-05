@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ HttpClient, HttpHeaders } from '@angular/common/http';
+import { ModalController,NavParams, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import {StorageService} from 'src/app/services/storage.service';
 import { isEmpty } from 'rxjs/operators';
@@ -17,7 +18,7 @@ export class MyCartPage implements OnInit {
   private subTotalPrice = 0;
   private totalPrice =0;
 
-  constructor(private http:HttpClient, private router: Router, private purchase: StorageService, private env: EnvService) { 
+  constructor(private http:HttpClient, private router: Router, private purchase: StorageService, private env: EnvService,  private navCtrl: NavController) { 
 
     this.items = this.purchase.storage;
 
@@ -45,31 +46,27 @@ export class MyCartPage implements OnInit {
 
   makePurchase(){
 
-    
-
     var temporal = {"products":JSON.stringify(this.items), "totalPrice":this.totalPrice};
  
-
     var header = {
       headers: new HttpHeaders().set('Authorization',this.purchase.token)
     }
 
-    // var header = {
-    //   headers: new HttpHeaders().set('Authorization','eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTkiLCJlbWFpbCI6ImNsaWVudDFAaG90bWFpbC5jb20iLCJ1c2VybmFtZSI6ImNsaWVudDFAaG90bWFpbC5jb20iLCJleHAiOjE1NTg5Nzg5ODh9.fPdBmDFQNJKomk8mp91iNaQRIv9f6U3qjfT5ArS8HcY' )
-    // }
-
-
     console.log(temporal);
     console.log(header);
+
+   
 
 
     this.http.post(this.env.API_URL +"/api/v1/purchases/make-purchase/",temporal, header)
     .subscribe(data => {
       console.log(data);
+      console.log("Queti was here!")
+      this.navCtrl.navigateRoot('/confirmation');
      }, error => {
       console.log(error);
-  
     });
+
 
   }
 
