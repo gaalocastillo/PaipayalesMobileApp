@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterEvent } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,8 @@ import { Router, RouterLink, RouterEvent } from '@angular/router';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
+
+  private user: any;
   
 
   pages = [
@@ -23,6 +26,10 @@ export class MenuPage implements OnInit {
       url: '/menu/my-points',
     },
     {
+      title:'Productos',
+      url:'/menu/products-menu',
+    },
+    {
       title:'Contacto',
       url:'/menu/contact',
     }
@@ -31,10 +38,15 @@ export class MenuPage implements OnInit {
   selectedPath = '' ;
 
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private userStorage: StorageService) { 
     this.router.events.subscribe((event: RouterEvent) =>{
       this.selectedPath = event.url;
     });
+
+    this.user = userStorage.get_user();
+    
+    console.log(this.user);
+
   }
 
   ngOnInit() {

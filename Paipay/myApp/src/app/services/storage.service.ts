@@ -19,5 +19,9 @@ export class StorageService {
     this.user = user;  
   }
 
+  get_user(){
+    return this.user;
+  }
+
 
 }
