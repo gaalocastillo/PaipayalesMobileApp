@@ -22,8 +22,7 @@ const routes: Routes = [
   { path: 'balance', loadChildren: './pages/balance/balance.module#BalancePageModule' },
   { path: 'list-fruits', loadChildren: './pages/list-fruits/list-fruits.module#ListFruitsPageModule' },
   { path: 'confirmation', loadChildren: './pages/confirmation/confirmation.module#ConfirmationPageModule' },
-  { path: 'product', loadChildren: './pages/product/product.module#ProductPageModule' },
-  { path: 'temp', loadChildren: './pages/temp/temp.module#TempPageModule' }
+  { path: 'product', loadChildren: './pages/product/product.module#ProductPageModule' }
 ];
 
 @NgModule({
