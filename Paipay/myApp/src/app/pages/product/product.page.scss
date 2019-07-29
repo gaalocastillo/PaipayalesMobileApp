@@ -10,6 +10,12 @@ ion-content{
     --background-size: cover;
 }
 
+ion-footer{
+    background-color: #547E1A;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
 .bg-image {
     background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -48,6 +54,11 @@ ion-item{
     --background: var(--ion-item-background,var(--ion-background-color,transparent));
 }
 
+ion-icon{
+    font-size: 25px; 
+    //size="large"
+}
+
 .imgItem{
     height:53.06px ;
     width: 89.9px ;
@@ -55,7 +66,7 @@ ion-item{
 
 .priceItem{
     font-family: "Century Gothic";
-    size: 15.73em;
+    size: 15em;
     color: #402208;
 }
 
@@ -74,52 +85,81 @@ ion-item{
     height: 54.92px;
 }
 
-.addBtn{
-    background-color: transparent !important;
-    fill: transparent;
-    margin: none;
-}
-
-.removeBtn{
-    background-color: transparent !important;
-    fill: transparent;
-    margin: none;
-}
-
-
-.continue{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
+.productsBtn{
+    display: inline-block;
     align-items: center;
-    background-color: transparent !important;
+    position: relative;
+    top: 20px;
 }
 
+.qtyLabel{
+    background-color: white !important;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    color: #402208;
+    font-family: "Candara";
+    font-weight: bold;
+    height: 25px;
+    width: 25px;
+}
 
-.continueBuying-button {
-    fill: transparent;
+.addBtn, .removeBtn{
+    background-color: #547E1A;
+    text-align: center;
+    color: white;
+    font-family: "Candara";
+    font-weight: bold;
+    font-size: 1em;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.btns{
     background-color: transparent !important;
+    position:absolute;
+    top:95vh;
+    transform:translateY(-100%);
+    width:100%;
+}
+
+.continueBuyingBtn{
+    background-color: transparent !important;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 1.2 em;
+    color: #00852A;
     margin-left: auto;
     margin-right: auto;
-
-    // border: none;
-    // width:28px;
-    // height:38.7px;
+    float: left;
 }
 
-.endBuying-button{
-    fill: transparent;
+.endBuyingBtn{
     background-color: transparent !important;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 1.2 em;
+    color: #00852A;
     margin-left: auto;
     margin-right: auto;
-
+    float: right;
 }
 
-.continueBuyingIcon, .endBuyingIcon{
-    fill: transparent;
+.categoriesBtns{
+    margin: auto;
+    display: flex;
+}
+
+.categoryBtn{
     background-color: transparent !important;
-    width: 128px;
-    height: 15px;
+    display: flex;
+    height: 50px;;
+    width: 50px;
+}
+
+.categoryImg{
+    height: 40px;;
+    width: 40px;
 }
 
 

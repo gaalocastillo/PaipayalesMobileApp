@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import{ HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NavController, NavParams} from '@ionic/angular';
-import { isNgTemplate } from '@angular/compiler';
 import {EnvService} from 'src/app/services/env.service';
 import {StorageService} from 'src/app/services/storage.service';
-import { element } from '@angular/core/src/render3';
+// import { isNgTemplate } from '@angular/compiler';
+// import { LoadingController } from '@ionic/angular';
+// import { element } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-product',
@@ -16,9 +17,9 @@ export class ProductPage implements OnInit {
 
   private items  = []; 
   private categoriesOptions = [];
-  private category: any;
 
-  constructor(private http:HttpClient, private router: Router,private purchase: StorageService, private env: EnvService) { 
+
+  constructor(private http:HttpClient, private router: Router,private purchase: StorageService, private env: EnvService, private navCtrl: NavController ) { 
     
     this.http.get(env.API_URL +'/api/v1/products/' + this.purchase.selectedCategory["name"]).subscribe((response : any[]) => {
       response.forEach(element => {
@@ -27,17 +28,17 @@ export class ProductPage implements OnInit {
       });
 
     }); 
-    
-    this.env.get_categories().subscribe((res: any[])=>{
+
+    this.http.get(env.API_URL  +'/api/v1/categories/').subscribe((res: any[])=>{
       res.forEach(element =>{
         if(element["name"] !== this.purchase.selectedCategory["name"].toLowerCase()){
          this.categoriesOptions.push(element); 
         }
       });
     });
-    
-    this.category = this.purchase.selectedCategory;
   
+    
+
   }
   
   // increment product qty
@@ -70,13 +71,9 @@ export class ProductPage implements OnInit {
     console.log(this.items);
   }
 
-
-  BackButtonAction(){
-    
-  }
-
-  returnToMenu(){
-    this.router.navigate(['/menu/products-menu'], this.purchase.storage);
+  continueBuying(){
+    //this.navCtrl.back();
+    this.router.navigate(['menu/products-menu']);
   }
 
   makePurchase(){
@@ -90,13 +87,28 @@ export class ProductPage implements OnInit {
     });
 
     this.purchase.storage = selectedItems;
-
     this.router.navigate(['my-cart'], this.purchase.storage);
 
   }
 
+  selectedCategory(category:String){
+
+    this.categoriesOptions.forEach(element => {
+      if(element["name"] == category){
+        this.purchase.selectedCategory = element;
+      }
+    });
+
+    console.log(this.purchase.selectedCategory);
+
+  
+
+  }
 
   ngOnInit() {
+
+
+
   }
 
 

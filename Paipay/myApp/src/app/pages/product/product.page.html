@@ -18,8 +18,6 @@
 </ion-header>
 
 
-
-
 <ion-content fullscreen  class= "bg-image" scrollX="false"   >
 
   <!-- logo block -->
@@ -44,43 +42,33 @@
       </ion-col>
           
       <ion-col style="width:100px;">
-        <button class="addBtn" clear (click)="incrementQty(item.id)"><ion-icon src="assets/misc/add.svg" size="large"></ion-icon></button>{{qty}}
-        <label> {{item.qty}}</label>
-        <button class="removeBtn"  clear (click)="decrementQty(item.id)"><ion-icon src="assets/misc/remove.svg" size="large"></ion-icon></button>
+        <div class="productsBtn">
+          <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
+          <label class="qtyLabel" > {{item.qty}}</label>
+          <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>    
 </div>
 
 
-  <!-- <div >
-    <ion-list style=" background: transparent !important; " padding >
-      <ion-item class="productItem" *ngFor="let item of items">
-        <img class="imgItem" src="{{item.photo}}">
-        <p style="text-align:center;">
-        <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
-        <br>
-        <label class="nameItem">{{item.name}}</label>
-        </p>
-        <button class="addBtn" clear (click)="incrementQty(item.id)"><ion-icon src="assets/misc/add.svg" size="large"></ion-icon></button>{{qty}}
-        <label> {{item.qty}}</label>
-        <button class="removeBtn"  clear (click)="decrementQty(item.id)"><ion-icon src="assets/misc/remove.svg" size="large"></ion-icon></button>
-      </ion-item>
-    </ion-list>
-  </div> -->
-
-  <div style="background-color: transparent !important;">
-    <div class="continue" >
-      <button class="continueBuying-button">
-        <img class="continueBuyingIcon" src="assets/buttons/continueBuying.png" alt="">
-      </button>
-
-      <button class="endBuying-button" click>
-        <img class="endBuyingIcon" src="assets/buttons/endBuying.png" alt="" (click)="makePurchase()">
-      </button>
-    </div>
-  </div>
-
-
+<div padding class="btns">
+  <button  slot="start" class="continueBuyingBtn" (click)="continueBuying()">
+   Seguir comprando >
+  </button>
+  <button slot="start" class="endBuyingBtn" (click)="makePurchase()">
+    Finalizar Compra >
+  </button>
+</div>
 
 </ion-content>
+
+
+<ion-footer >
+  <div class="categoriesBtns">
+    <button class="categoryBtn" *ngFor="let category of categoriesOptions; let i = index" (click)="selectedCategory(category.name)">
+      <img  class="categoryImg" src="{{category.categoryImg}}">        
+    </button>
+  </div>
+</ion-footer>
