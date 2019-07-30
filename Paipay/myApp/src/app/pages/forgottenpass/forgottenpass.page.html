@@ -12,17 +12,20 @@
     <ion-label class="labelPass"> ¿Olvidaste tu Contraseña? </ion-label>
   </div>
 
-  <div class="email">
-    <div style="width: 305.98px;">
-      <ion-input class="email-input" type="email" placeholder="Correo electrónico" ></ion-input>
+  <form #form="ngForm" (ngSubmit)="retrivePass(form)" method="post">
+    <div class="email">
+      <div style="width: 305.98px;">
+        <ion-input ngModel class="email-input" name="email" type="email" placeholder="Correo electrónico" ></ion-input>
+      </div>
     </div>
-  </div>
    
-  <div class="button">
-    <button class="retrivePass"  >
-      <ion-img class="retriveIcon" src="assets/buttons/retrivePass.png" alt="" ></ion-img>
-    </button>
-  </div> 
+    <div class="button">
+      <button type="submit" class="retrivePass"   >
+        <ion-img class="retriveIcon" src="assets/buttons/retrivePass.png" alt="" ></ion-img>
+      </button>
+    </div> 
+
+  </form>
        
 </ion-content>
 

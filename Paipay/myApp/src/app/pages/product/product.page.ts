@@ -21,7 +21,8 @@ export class ProductPage implements OnInit {
 
   constructor(private http:HttpClient, private router: Router,private purchase: StorageService, private env: EnvService, private navCtrl: NavController ) { 
     
-    this.http.get(env.API_URL +'/api/v1/products/' + this.purchase.selectedCategory["name"]).subscribe((response : any[]) => {
+    
+    this.http.get(this.env.API_URL +'/api/v1/products/' + this.purchase.selectedCategory["name"]).subscribe((response : any[]) => {
       response.forEach(element => {
       element["qty"] = 0;
       this.items.push(element);
@@ -29,15 +30,13 @@ export class ProductPage implements OnInit {
 
     }); 
 
-    this.http.get(env.API_URL  +'/api/v1/categories/').subscribe((res: any[])=>{
+    this.http.get(this.env.API_URL  +'/api/v1/categories/').subscribe((res: any[])=>{
       res.forEach(element =>{
         if(element["name"] !== this.purchase.selectedCategory["name"].toLowerCase()){
          this.categoriesOptions.push(element); 
         }
       });
     });
-  
-    
 
   }
   
@@ -72,7 +71,7 @@ export class ProductPage implements OnInit {
   }
 
   continueBuying(){
-    //this.navCtrl.back();
+    
     this.router.navigate(['menu/products-menu']);
   }
 
@@ -99,17 +98,15 @@ export class ProductPage implements OnInit {
       }
     });
 
+    //this.router.onSameUrlNavigation='reload';
     console.log(this.purchase.selectedCategory);
-
-  
 
   }
 
   ngOnInit() {
 
-
-
   }
+
 
 
 

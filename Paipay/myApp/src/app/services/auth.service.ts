@@ -39,7 +39,7 @@ export class AuthService {
   register(name: String, email: String, password: String, phoneNumber: String, userZone: String, address: String, photo: String , role: any ) {
     return this.http.post(this.env.API_URL + '/api/v1/auth/register/',
       { name: name,  email: email, password: password, phoneNumber: phoneNumber, userZone :userZone, address: address, photo:photo, role: role}
-    )
+    );
   }
 
   logout() {
@@ -54,7 +54,7 @@ export class AuthService {
         delete this.token;
         return data;
       })
-    )
+    );
   }
 
   user() {
@@ -66,7 +66,7 @@ export class AuthService {
       tap(user => {
         return user;
       })
-    )
+    );
   }
 
   getToken() {
@@ -85,4 +85,10 @@ export class AuthService {
       }
     );
   }
+
+  resetPassword(email: String) {
+    return this.http.post(this.env.API_URL + '/api/v1/auth/generate-new-password/',{email: email});    
+  }
+
+
 }

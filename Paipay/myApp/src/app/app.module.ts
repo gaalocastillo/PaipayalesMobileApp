@@ -13,6 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { AppAvailability} from '@ionic-native/app-availability/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import {Device } from '@ionic-native/device/ngx';
+import { from } from 'rxjs';
+import { AppLauncher, AppLauncherOptions } from '@ionic-native/app-launcher/ngx';
+import { Platform } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +40,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NativeStorage,
     AppAvailability, 
-    InAppBrowser
+    InAppBrowser,
+    Device,
+    AppLauncher
   ],
   bootstrap: [AppComponent]
 })

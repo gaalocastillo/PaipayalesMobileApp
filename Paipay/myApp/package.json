@@ -22,6 +22,7 @@
     "@angular/router": "^7.2.15",
     "@ionic-native/app-availability": "^5.9.0",
     "@ionic-native/app-launcher": "^5.9.0",
+    "@ionic-native/camera": "^5.11.0",
     "@ionic-native/core": "^5.9.0",
     "@ionic-native/device": "^5.9.0",
     "@ionic-native/in-app-browser": "^5.9.0",
@@ -35,8 +36,10 @@
     "cordova-android": "8.0.0",
     "cordova-browser": "6.0.0",
     "cordova-ios": "5.0.1",
+    "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-app-launcher": "^0.4.0",
     "cordova-plugin-appavailability": "^0.4.2",
+    "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-nativestorage": "2.3.2",
     "core-js": "^2.6.9",
     "rxjs": "^6.5.2",
@@ -89,7 +92,9 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-nativestorage": {},
       "cordova-plugin-app-launcher": {},
-      "cordova-plugin-appavailability": {}
+      "cordova-plugin-appavailability": {},
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-camera": {}
     },
     "platforms": [
       "android",
