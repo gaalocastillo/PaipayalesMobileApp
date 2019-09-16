@@ -86,6 +86,7 @@ export class ProductPage implements OnInit {
     });
 
     this.purchase.storage = selectedItems;
+    console.log(this.purchase.storage);
     this.router.navigate(['my-cart'], this.purchase.storage);
 
   }

@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { MenuPage } from './menu.page';
 
 const routes: Routes = [
+
   {
     path: '',
     component: MenuPage,
@@ -25,6 +26,8 @@ const routes: Routes = [
     path:'',
     redirectTo:'/menu/products-menu'
   }
+  
+
   
 ];
 

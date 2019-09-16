@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class StorageService {
 
   public categories: any;
-  public selectedCategory: any;
   public registrationForm: any;
+  public selectedCategory: any;
   public storage: any;
   public token: any;
   private user:any;
@@ -22,6 +22,8 @@ export class StorageService {
   get_user(){
     return this.user;
   }
+
+  
 
 
 }

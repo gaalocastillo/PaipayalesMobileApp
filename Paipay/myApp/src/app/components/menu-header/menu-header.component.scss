@@ -1,0 +1,10 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+/* Show background if class is active */
+.show-background {
+    border-style: none;
+    background: var(--ion-color-primary);
+}

@@ -29,8 +29,8 @@ export class LoginPage implements OnInit {
   }
 
   // Dismiss Login Modal
-  dismissLogin() {
-    this.modalController.dismiss();
+  async dismissLogin() {
+    await this.modalController.dismiss(null, undefined, null);
   }
 
   // On Register button tap, dismiss login modal and open register modal
@@ -60,10 +60,13 @@ export class LoginPage implements OnInit {
         this.alertService.presentToast("Usuario o contraseña incorrecta");
       },
       () => {
-        this.dismissLogin();
+        
+        //this.navCtrl.push(); // Correct
         console.log(this.storage.storage);
         this.navCtrl.navigateRoot('/menu/products-menu');
+        this.dismissLogin();
       }
     );
   }
 }
+
