@@ -18,16 +18,16 @@ ion-content{
 }
 
 .jumpIntro{
-    display: flex;
+
+    position: absolute;
+    top: 12px;
+    
 }
 
 .loginBtn{
-    display: block;
-    margin-right: 12px; 
-    top: 12px;
-    width: 60px;
-    height: 15px;
 
+    //width: 60px;
+    height: 15px;
 }
 
 .home-container {

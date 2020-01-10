@@ -16,7 +16,26 @@ import {StorageService} from 'src/app/services/storage.service';
 })
 
 export class RegistrationPage implements OnInit {
+
+
+  user = {
+    name: '',
+    phoneNumber: '',
+    email: '',
+    password: '',
+    address: ''
+  }
     
+
+  // “name” : str,    
+  // “email” : str,
+  // “password” : str
+  // “phoneNumber” : str,
+  // “userZone” : str,
+  // “address” : str,
+  // “photo” : file
+  // “role” : int (admin:0, client:1, delivery-man:2)
+
 
   constructor(private modalController: ModalController,
     private authService: AuthService,
@@ -28,21 +47,12 @@ export class RegistrationPage implements OnInit {
   
   ngOnInit() {
   }
-    // Dismiss Register Modal
-  dismissRegister() {
-    this.modalController.dismiss();
-  }
+
     
-  // On Login button tap, dismiss Register modal and open login Modal
-  async loginModal() {
-    this.dismissRegister();
-    const loginModal = await this.modalController.create({
-      component: LoginPage,
-    });
-    return await loginModal.present();
-  }
 
   register(form: NgForm) {
+
+
 
     this.registration.registrationForm = form;
     this.router.navigate(['adress'],this.registration.registrationForm);

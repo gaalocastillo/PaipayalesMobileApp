@@ -28,23 +28,23 @@
 
 
     <div class="name">
-      <ion-input ngModel class="nameInput" name="name" type ="text" placeholder="Nombre y Apellido"  ></ion-input>
+      <ion-input ngModel class="nameInput" name="name" type ="text" placeholder="Nombre y Apellido" required></ion-input>
     </div>
 
     <div class="phone">
-      <ion-input ngModel class="phoneInput" name="phone"  type ="text" placeholder="Teléfono"></ion-input>
+      <ion-input ngModel class="phoneInput" name="phone"  type ="text" placeholder="Teléfono" pattern = '(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})'required></ion-input>
     </div>
 
     <div class="mail">
-      <ion-input ngModel class="mailInput" name="email" type="email" placeholder="Correo Electrónico"> </ion-input>
+      <ion-input ngModel class="mailInput" name="email" type="email" placeholder="Correo Electrónico" pattern = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required> </ion-input>
     </div>
 
     <div class="password">
-      <ion-input ngModel class="passwordInput" name="password"  type="password" placeholder="Contraseña" ></ion-input>
+      <ion-input ngModel class="passwordInput" name="password"  type="password" placeholder="Contraseña" minlength=8 required></ion-input>
     </div>
 
     <div class="adress">
-      <ion-input ngModel class="adressInput" name="adress"  type="text" placeholder="Dirección" ></ion-input>
+      <ion-input ngModel class="adressInput" name="adress"  type="text" placeholder="Dirección" required></ion-input>
     </div>
 
     
@@ -52,7 +52,8 @@
     
 
     <div class="continue">
-      <button type="submit"  class="continue-button"  >
+      <button type="submit"  class="continue-button"  [disabled] ="form.invalid">
+        <!-- [disabled] ="form.invalid" -->
         <ion-img class="continueIcon" src="assets/buttons/continueLogin.png" alt="" ></ion-img>
       </button>
     </div>

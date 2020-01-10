@@ -23,6 +23,7 @@ export class LoginPage implements OnInit {
     private navCtrl: NavController,
     private alertService: AlertService, 
     private storage: StorageService,
+
   ) { }
 
   ngOnInit() {
@@ -43,6 +44,7 @@ export class LoginPage implements OnInit {
   }
 
   login(form: NgForm) {
+    
     this.authService.login(form.value.email, form.value.password).subscribe(
       data => {
         

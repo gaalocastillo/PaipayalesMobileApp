@@ -24,17 +24,20 @@ export class AdressPage implements OnInit {
 
   public items = [];
   selected: "";
+
   
-  
-  
-  
-  constructor(private http: HttpClient,
+  constructor(
+    
+    private http: HttpClient,
     private modalController: ModalController,
     private authService: AuthService,
     private alertService: AlertService, 
     private router: Router,
     private registration: StorageService, 
     private env: EnvService
+
+
+   
     
     ) {
 
@@ -49,6 +52,14 @@ export class AdressPage implements OnInit {
   });
     
     console.log(this.items);
+
+
+    console.log(this.registration.registrationForm.value.name);
+    console.log(this.registration.registrationForm.value.email);
+    console.log(this.registration.registrationForm.value.password);
+    console.log(this.registration.registrationForm.value.phone);
+    console.log(this.selected);
+    console.log(this.registration.registrationForm.value.adress);
 
   }
 
@@ -81,9 +92,16 @@ export class AdressPage implements OnInit {
   }
 
 
-
-
   register() {
+
+
+    console.log(this.registration.registrationForm.value.name);
+    console.log(this.registration.registrationForm.value.email);
+    console.log(this.registration.registrationForm.value.password);
+    console.log(this.registration.registrationForm.value.phone);
+    console.log(this.selected);
+    console.log(this.registration.registrationForm.value.adress);
+
 
     this.authService.register(this.registration.registrationForm.value.name, this.registration.registrationForm.value.email, this.registration.registrationForm.value.password, this.registration.registrationForm.value.phone,this.selected, this.registration.registrationForm.value.adress, '', 1 ).subscribe(
       data => {

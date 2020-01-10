@@ -94,7 +94,9 @@
       "cordova-plugin-app-launcher": {},
       "cordova-plugin-appavailability": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-camera": {}
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": [
       "android",

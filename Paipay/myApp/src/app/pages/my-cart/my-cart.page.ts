@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import {StorageService} from 'src/app/services/storage.service';
 import { isEmpty } from 'rxjs/operators';
 import {EnvService} from 'src/app/services/env.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-my-cart',
@@ -14,15 +15,20 @@ import {EnvService} from 'src/app/services/env.service';
 export class MyCartPage implements OnInit {
 
   public items  = []; 
+  public selecteditems : [];
   private shippingFee = 1.50;
   private subTotalPrice = 0;
   private totalPrice =0;
 
-  constructor(private http:HttpClient, private router: Router, private purchase: StorageService, private env: EnvService,  private navCtrl: NavController) { 
+  constructor(private http:HttpClient, 
+    private router: Router, 
+    private purchase: StorageService, 
+    private env: EnvService,  
+    private navCtrl: NavController) { 
 
     this.items = this.purchase.storage;
 
-    if(!(this.items.length === 0) || !(this.purchase.storage.length==0)){
+    if(!(this.items.length === 0) || !(this.purchase.storage.length ==0) ){
       
       this.items.forEach(element => {
         this.subTotalPrice += (element.price * element.qty);
@@ -45,6 +51,17 @@ export class MyCartPage implements OnInit {
 
 
   makePurchase(){
+
+    // var obj = {}};
+    // obj.name = JSON.stringify(this.items["name"]);
+    // obj["qty"] = JSON.stringify(this.items["qty"]);
+
+    // this.items.forEach(element =>{
+    //   this.selecteditems.push();
+    // })
+    
+    // console.log(this.selecteditems);
+
 
     var temporal = {"products":JSON.stringify(this.items), "totalPrice":this.totalPrice};
  
