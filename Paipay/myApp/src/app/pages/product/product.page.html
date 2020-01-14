@@ -9,30 +9,32 @@
   </div>
 
 
-<div>
-  <ion-grid class="grid-products" style=" background: transparent !important; " padding >
-    <ion-row *ngFor="let item of items; let i = index" >
-      <ion-col>
-        <img class="imgItem" src="{{item.photo}}">
-      </ion-col>
-
-      <ion-col>
-        <p style="text-align:center;">
-          <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
-        <br>
-          <label class="nameItem">{{item.name}}</label>
-        </p>
-      </ion-col>
-          
-      <ion-col style="width:100px;">
-        <div class="productsBtn">
-          <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
-          <label class="qtyLabel" > {{item.qty}}</label>
-          <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>    
+<div padding>
+  <div>
+    <ion-grid class="grid-products" style=" background: transparent !important; " padding >
+      <ion-row *ngFor="let item of items; let i = index" >
+        <ion-col>
+          <img class="imgItem" src="{{item.photo}}">
+        </ion-col>
+  
+        <ion-col>
+          <p style="text-align:center;">
+            <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
+          <br>
+            <label class="nameItem">{{item.name}}</label>
+          </p>
+        </ion-col>
+            
+        <ion-col style="width:100px;">
+          <div class="productsBtn">
+            <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
+            <label class="qtyLabel" > {{item.qty}}</label>
+            <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>    
+  </div>
 </div>
 
 
