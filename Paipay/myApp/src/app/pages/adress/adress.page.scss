@@ -8,6 +8,10 @@ ion-content{
     --background-size: cover;
 }
 
+ion-item{
+    --background-activated: var(--ion-item-background,var(--ion-background-color,#402208));
+}
+
 .bg-image {
     background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -112,3 +116,4 @@ ion-content{
     height:39px;
     width:163.47px;
 }
+

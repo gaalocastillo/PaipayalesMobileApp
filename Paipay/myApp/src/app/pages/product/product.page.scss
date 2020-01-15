@@ -30,7 +30,7 @@ ion-footer{
 }
 
 .logoBlock{
-    position: relative; 
+    position: sticky; 
     top:20px;
 }
 
@@ -39,6 +39,9 @@ ion-footer{
     margin-right: auto;
 }
 
+.list-products{
+    background: var(--ion-item-background,var(--ion-background-color, transparent));
+}
 
 .productItem {
     fill: transparent;
@@ -47,7 +50,9 @@ ion-footer{
 
 .grid-products{
     overflow-y: hidden;
+
 }
+
 
 
 item-native{
@@ -121,11 +126,14 @@ ion-icon{
 }
 
 .btns{
+    background: url("src/assets/backgrounds/mainBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
     background-color: transparent !important;
-    position:absolute;
+    position:sticky;
     top:95vh;
     transform:translateY(-100%);
     width:100%;
+    margin: 0;
 }
 
 .continueBuyingBtn{

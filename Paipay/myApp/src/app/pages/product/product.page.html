@@ -1,51 +1,130 @@
 <app-menu-header></app-menu-header>
 
-
-<ion-content fullscreen  class= "bg-image" scrollX="false"   >
-
+<div class= "bg-image">
   <!-- logo block -->
   <div class="logoBlock">
     <ion-img class="logo"  src="assets/fruits/35-02.png" ></ion-img>
   </div>
-
-
-<div padding>
-  <div>
-    <ion-grid class="grid-products" style=" background: transparent !important; " padding >
-      <ion-row *ngFor="let item of items; let i = index" >
-        <ion-col>
-          <img class="imgItem" src="{{item.photo}}">
-        </ion-col>
-  
-        <ion-col>
-          <p style="text-align:center;">
-            <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
-          <br>
-            <label class="nameItem">{{item.name}}</label>
-          </p>
-        </ion-col>
-            
-        <ion-col style="width:100px;">
-          <div class="productsBtn">
-            <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
-            <label class="qtyLabel" > {{item.qty}}</label>
-            <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>    
-  </div>
 </div>
 
+<ion-content class= "bg-image" scrollX="false">
+  <ion-list class="list-products">
+    <ion-item *ngFor="let item of items; let i = index">
+      <ion-grid class="grid-products" style=" background: transparent !important; " padding >
+        <ion-row >
+          <ion-col>
+            <img class="imgItem" src="{{item.photo}}">
+          </ion-col>
+        
+          <ion-col>
+            <p style="text-align:center;">
+            <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
+            <br>
+            <label class="nameItem">{{item.name}}</label>
+            </p>
+          </ion-col>
+                  
+          <ion-col style="width:100px;">
+            <div class="productsBtn">
+              <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
+              <label class="qtyLabel" > {{item.qty}}</label>
+              <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
+            </div>
+          </ion-col>    
+        </ion-row>
+      
+      </ion-grid> 
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
 
-<div padding class="btns">
+<div padding class="btns" >
   <button  slot="start" class="continueBuyingBtn" (click)="continueBuying()">
-   Seguir comprando >
+     Seguir comprando >
   </button>
+    
   <button slot="start" class="endBuyingBtn" (click)="makePurchase()">
     Finalizar Compra >
   </button>
 </div>
+
+<ion-footer >
+  <div class="categoriesBtns">
+    <button class="categoryBtn" *ngFor="let category of categoriesOptions; let i = index" (click)="selectedCategory(category.name)">
+      <img  class="categoryImg" src="{{category.categoryImg}}">        
+    </button>
+  </div>
+</ion-footer>
+
+
+
+<!-- 
+<app-menu-header></app-menu-header>
+
+
+<ion-content fullscreen  class= "bg-image" scrollX="false"   >
+
+  <div>
+
+    <div class="logoBlock">
+    <ion-img class="logo"  src="assets/fruits/35-02.png" ></ion-img>
+    </div>
+
+    <div >
+      <div>
+        <ion-grid class="grid-products" style=" background: transparent !important; " padding >
+      
+          <ion-row *ngFor="let item of items; let i = index">
+            <ion-col>
+              <img class="imgItem" src="{{item.photo}}">
+            </ion-col>
+      
+            <ion-col>
+              <p style="text-align:center;">
+                <label class="priceItem">1 {{item.typeSelling}} ${{item.price}}</label>
+              <br>
+                <label class="nameItem">{{item.name}}</label>
+              </p>
+            </ion-col>
+                
+            <ion-col style="width:100px;">
+              <div class="productsBtn">
+                <button class="addBtn" clear (click)="decrementQty(item.id)"> - </button>
+                <label class="qtyLabel" > {{item.qty}}</label>
+                <button class="removeBtn" clear (click)="incrementQty(item.id)"> + </button>
+              </div>
+            </ion-col>
+            
+          </ion-row>
+    
+        </ion-grid>   
+      </div>
+       
+    
+  </div>
+
+
+  <div padding class="btns">
+    <button  slot="start" class="continueBuyingBtn" (click)="continueBuying()">
+     Seguir comprando >
+    </button>
+    <button slot="start" class="endBuyingBtn" (click)="makePurchase()">
+      Finalizar Compra >
+    </button>
+  </div>
+
+
+
+  </div>
+
+ 
+
+
+
+
+
+
 
 </ion-content>
 
@@ -56,4 +135,4 @@
       <img  class="categoryImg" src="{{category.categoryImg}}">        
     </button>
   </div>
-</ion-footer>
+</ion-footer> -->
